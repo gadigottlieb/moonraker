@@ -1,3 +1,4 @@
+<%= link_to "Edit Player", edit_player_path(@player) %>
 <div id="main-image">
   <div id="photo">
     <%= image_tag(@player.photo) %>
@@ -15,6 +16,6 @@
     <li>Born: <strong><%= @player.birthday %></strong></li> |
     <li>Bats/Throws: <strong><%= @player.bats %>/<%= @player.throws %></strong></li> |
     <li>Height: <strong><%= @player.height %></strong></li> |
-    <li>Height: <strong><%= @player.weight %></strong></li> 
+    <li>Height: <strong><%= @player.weight %></strong></li>
   </ul>
 </div>

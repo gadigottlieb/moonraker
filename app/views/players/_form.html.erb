@@ -1,0 +1,42 @@
+<%= form_for @player do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+
+  <%= f.label :number %>
+  <%= f.number_field :number %>
+
+  <%= f.label :primary_position %>
+  <%= f.select :primary_position, options_for_select(@primary_positions.map {|primary_position| primary_position }) %>
+
+  <%= f.label :secondary_position %>
+  <%= f.select :secondary_position, options_for_select(@primary_positions.map {|primary_position| primary_position }) %>
+
+  <%= f.label :position_description %>
+  <%= f.select :position_description, options_for_select(@position_descriptions.map {|position_description| position_description}) %>
+
+  <%= f.label :bats %>
+  <%= f.select :bats, options_for_select(@bats.map{|bat| bat}) %>
+
+  <%= f.label :throws %>
+  <%= f.select :throws, options_for_select(@throws.map{|throw| throw}) %>
+
+  <%= f.label :photo %>
+  <%= f.text_field :photo %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.label :height %>
+  <%= f.text_field :height %>
+
+  <%= f.label :weight %>
+  <%= f.number_field :weight %>
+
+  <%= f.label :birthday %>
+  <%= f.date_field :birthday %>
+
+  <%= f.submit %>
+<% end %>
