@@ -1,0 +1,20 @@
+<div id="main-image">
+  <div id="photo">
+    <%= image_tag(@player.photo) %>
+    <div id="main-name">
+      <h1 id="player-name">
+        <%= @player.first_name + " " + @player.last_name %>
+        <span id="player-number"><%= @player.number %> |</span>
+        <span id="player-position"><%= @player.primary_position %></span>
+      </h1>
+    </div>
+  </div>
+</div>
+<div id="player-info">
+  <ul>
+    <li>Born: <strong><%= @player.birthday %></strong></li> |
+    <li>Bats/Throws: <strong><%= @player.bats %>/<%= @player.throws %></strong></li> |
+    <li>Height: <strong><%= @player.height %></strong></li> |
+    <li>Height: <strong><%= @player.weight %></strong></li> 
+  </ul>
+</div>

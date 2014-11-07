@@ -16,6 +16,40 @@ ActiveRecord::Schema.define(version: 20141107041212) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "games", force: true do |t|
+    t.string  "opponent"
+    t.integer "home_score"
+    t.integer "opponent_score"
+    t.boolean "win_result"
+    t.date    "date"
+    t.integer "season_id"
+  end
+
+  create_table "players", force: true do |t|
+    t.string  "first_name"
+    t.string  "last_name"
+    t.integer "number"
+    t.string  "primary_position"
+    t.string  "secondary_position"
+    t.string  "position_description"
+    t.string  "bats"
+    t.string  "throws"
+    t.string  "photo"
+    t.text    "description"
+    t.string  "height"
+    t.integer "weight"
+    t.date    "birthday"
+  end
+
+  create_table "seasons", force: true do |t|
+    t.integer "year"
+    t.integer "wins"
+    t.integer "losses"
+    t.integer "runs_scored"
+    t.integer "runs_allowed"
+    t.string  "percentage"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -30,6 +64,7 @@ ActiveRecord::Schema.define(version: 20141107041212) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.integer  "role"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

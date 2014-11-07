@@ -1,0 +1,25 @@
+<h2>Seasons</h2>
+<table border="2">
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>RS</th>
+      <th>RA</th>
+      <th>PCT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @seasons.each do |season| %>
+    <tr>
+      <th><%= season.year %></th>
+      <th><%= season.wins %></th>
+      <th><%= season.losses %></th>
+      <th><%= season.runs_scored %></th>
+      <th><%= season.runs_allowed %></th>
+      <th><%= season.percentage %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

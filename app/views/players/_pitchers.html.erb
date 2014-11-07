@@ -1,0 +1,13 @@
+<% @players.each do |player| %>
+  <% if player.position_description == "Pitchers" %>
+    <tr>
+      <td class="number"><%= player.number %></td>
+      <td class="first-name"><%= link_to (player.first_name + " " + player.last_name), player_path(player) %></td>
+      <td class="bats"><%= player.bats %></td>
+      <td class="throws"><%= player.throws %></td>
+      <td class="height"><%= player.height %>"</td>
+      <td class="weight"><%= player.weight %>lbs</td>
+      <td class="birthday"><%= player.birthday %></td>
+    </tr>
+  <% end %>
+<% end %>
