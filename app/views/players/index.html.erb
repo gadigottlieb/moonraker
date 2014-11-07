@@ -1,4 +1,6 @@
-<%= link_to "Add Player", new_player_path(@player) %>
+<% if can? :create, @player %>
+  <%= link_to "Add Player", new_player_path(@player) %>
+<% end %>
 <h2>Roster</h2>
 <table border="2">
   <thead class="pitchers">

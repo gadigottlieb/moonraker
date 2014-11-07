@@ -1,2 +1,4 @@
 <%= render 'form' %>
-<%= link_to "Delete", player_path(@player), method: :delete  %>
+<% if can? :destroy, @player %>
+  <%= link_to "Delete", player_path(@player), method: :delete  %>
+<% end %>

@@ -1,4 +1,6 @@
-<%= link_to "Edit Player", edit_player_path(@player) %>
+<% if can? :update, @player %>
+  <%= link_to "Edit Player", edit_player_path(@player) %>
+<% end %>
 <div id="main-image">
   <div id="photo">
     <%= image_tag(@player.photo) %>

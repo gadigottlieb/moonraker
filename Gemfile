@@ -12,6 +12,7 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'high_voltage'
 gem 'pg'
+gem 'cancancan', '~> 1.9'
 gem 'therubyracer', :platform=>:ruby
 group :development do
   gem 'better_errors'
