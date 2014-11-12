@@ -19,8 +19,7 @@ twenty_fourteen = Season.create({
   wins: 6,
   losses: 0,
   runs_scored: 97,
-  runs_allowed: 27,
-  percentage: "1.000"
+  runs_allowed: 27
   })
 
 twenty_thirteen = Season.create({
@@ -29,7 +28,14 @@ twenty_thirteen = Season.create({
   losses: 1,
   runs_scored: 70,
   runs_allowed: 34,
-  percentage: ".833"
+  })
+
+twenty_twelve = Season.create({
+  year: 2012,
+  wins: 5,
+  losses: 3,
+  runs_scored: 69,
+  runs_allowed: 37,
   })
 
 dovi = Player.create({
@@ -271,6 +277,22 @@ moshe = Player.create({
   birthday: "11-5-1991"
   })
 
+willie = Player.create({
+  first_name: "Willie",
+  last_name: "Rapfogel",
+  number: 7,
+  primary_position: "1B",
+  secondary_position: "SS",
+  position_description: "Infielders",
+  bats: "R",
+  throws: "R",
+  photo: "gadigottlieb.JPG",
+  description: "",
+  height: "5'8",
+  weight: 200,
+  birthday: "11-5-1991"
+  })
+
 yaakov = Player.create({
   first_name: "Yaakov",
   last_name: "Rosenberg",
@@ -338,7 +360,7 @@ game_4 = Game.create({
   season_id: twenty_fourteen.id
   })
 game_5 = Game.create({
-  opponent: "Twin Bridge Tigers",
+  opponent: "Beaver Lake Topps",
   home_score: 9,
   opponent_score: 2,
   win_result: true,
@@ -406,3 +428,78 @@ game_thirteen_f = Game.create({
   date: "11-8-2013",
   season_id: twenty_thirteen.id
   })
+
+################
+#  Games 2012  #
+################
+
+game_twelve_a = Game.create({
+  opponent: "Vacation Villagers",
+  home_score: 3,
+  opponent_score: 9,
+  win_result: false,
+  date: "1-7-2012",
+  season_id: twenty_twelve.id
+  })
+game_twelve_b = Game.create({
+  opponent: "Beaver Lake Topps",
+  home_score: 7,
+  opponent_score: 3,
+  win_result: false,
+  date: "1-7-2012",
+  season_id: twenty_twelve.id
+  })
+game_twelve_c = Game.create({
+  opponent: "Garden View Mountain Lions",
+  home_score: 16,
+  opponent_score: 2,
+  win_result: true,
+  date: "15-7-2012",
+  season_id: twenty_twelve.id
+  })
+game_twelve_d = Game.create({
+  opponent: "Beaver Lake Topps",
+  home_score: 14,
+  opponent_score: 2,
+  win_result: true,
+  date: "22-7-2012",
+  season_id: twenty_twelve.id
+  })
+game_twelve_e = Game.create({
+  opponent: "Beaver Lake Topps",
+  home_score: 2,
+  opponent_score: 3,
+  win_result: false,
+  date: "22-7-2012",
+  season_id: twenty_twelve.id
+  })
+game_twelve_f = Game.create({
+  opponent: "Old Laners",
+  home_score: 6,
+  opponent_score: 5,
+  win_result: true,
+  date: "5-8-2012",
+  season_id: twenty_twelve.id
+  })
+game_twelve_g = Game.create({
+  opponent: "Fallsview",
+  home_score: 18,
+  opponent_score: 3,
+  win_result: true,
+  date: "12-8-2012",
+  season_id: twenty_twelve.id
+  })
+game_twelve_h = Game.create({
+  opponent: "Old Laners",
+  home_score: 3,
+  opponent_score: 10,
+  win_result: true,
+  date: "19-8-2012",
+  season_id: twenty_twelve.id
+  })
+##############
+#Season Roster #
+##############
+twenty_fourteen.players.push(dovi, gellis, leib, shai, jbomb, david, gadi, heshy, josh, mordechai, roni, isaacs, shalom, moshe, yaakov, kenny)
+twenty_thirteen.players.push(gellis, leib, shai, jbomb, david, gadi, heshy, josh, mordechai, roni, isaacs, shalom, moshe, willie, yaakov, kenny)
+twenty_twelve.players.push(gellis, leib, jbomb, david, gadi, heshy, josh, mordechai, roni, isaacs, shalom, moshe, willie, kenny)
