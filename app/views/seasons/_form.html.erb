@@ -1,0 +1,25 @@
+<%= form_for @season do |f| %>
+
+  <%= f.label :year %>
+  <%= f.select :year, options_for_select(@years.map{|year| year}) %>
+
+  <%= f.label :wins %>
+  <%= f.number_field :wins %>
+
+  <%= f.label :losses %>
+  <%= f.number_field :losses %>
+
+  <%= f.label :runs_scored %>
+  <%= f.number_field :runs_scored %>
+
+  <%= f.label :runs_allowed %>
+  <%= f.number_field :runs_allowed %>
+
+  <%= f.label :percentage %>
+  <%= f.number_field :percentage %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.submit %>
+<% end %>

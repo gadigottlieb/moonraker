@@ -1,0 +1,4 @@
+<%= render 'form' %>
+<% if can? :destroy, @player %>
+  <%= link_to "Delete", season_path(@season), method: :delete%>
+<% end %>

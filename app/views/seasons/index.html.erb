@@ -1,4 +1,7 @@
 <h2>Seasons</h2>
+<% if can? :create, @season %>
+  <%= link_to "Add Season", new_season_path %>
+<% end %>
 <table border="2">
   <thead>
     <tr>
@@ -13,12 +16,12 @@
   <tbody>
     <% @seasons.each do |season| %>
     <tr>
-      <th><%= season.year %></th>
+      <th><%= link_to season.year, season_path(season) %></th>
       <th><%= season.wins %></th>
       <th><%= season.losses %></th>
       <th><%= season.runs_scored %></th>
       <th><%= season.runs_allowed %></th>
-      <th><%= season.percentage %></th>
+      <th><%= season.percentage(season.wins, season.losses) %></th>
     </tr>
     <% end %>
   </tbody>
