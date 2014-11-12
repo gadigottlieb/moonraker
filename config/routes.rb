@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :users
   resources :games
   resources :seasons
+  post 'add_players_to_season', to: 'seasons#add_players_to_season'
   resources :players
 end
