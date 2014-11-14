@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141110005204) do
+ActiveRecord::Schema.define(version: 20141114021002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,30 @@ ActiveRecord::Schema.define(version: 20141110005204) do
     t.integer "opponent_score"
     t.boolean "win_result"
     t.date    "date"
+    t.integer "home_first_inning"
+    t.integer "home_second_inning"
+    t.integer "home_third_inning"
+    t.integer "home_fourth_inning"
+    t.integer "home_fifth_inning"
+    t.integer "home_sixth_inning"
+    t.integer "home_seventh_inning"
+    t.integer "home_eigth_inning"
+    t.integer "home_ninth_inning"
+    t.integer "opponent_first_inning"
+    t.integer "opponent_second_inning"
+    t.integer "opponent_third_inning"
+    t.integer "opponent_fourth_inning"
+    t.integer "opponent_fifth_inning"
+    t.integer "opponent_sixth_inning"
+    t.integer "opponent_seventh_inning"
+    t.integer "opponent_eigth_inning"
+    t.integer "opponent_ninth_inning"
     t.integer "season_id"
+  end
+
+  create_table "games_players", force: true do |t|
+    t.integer "game_id"
+    t.integer "player_id"
   end
 
   create_table "players", force: true do |t|
@@ -54,6 +77,24 @@ ActiveRecord::Schema.define(version: 20141110005204) do
     t.integer "runs_allowed"
     t.string  "percentage"
     t.text    "description"
+  end
+
+  create_table "statistics", force: true do |t|
+    t.boolean "played"
+    t.integer "at_bats"
+    t.integer "runs"
+    t.integer "hits"
+    t.integer "doubles"
+    t.integer "triples"
+    t.integer "homers"
+    t.integer "rbis"
+    t.integer "walks"
+    t.integer "hit_by_pitch"
+    t.integer "strikeouts"
+    t.integer "sac_fly"
+    t.integer "player_id"
+    t.integer "game_id"
+    t.integer "season_id"
   end
 
   create_table "users", force: true do |t|

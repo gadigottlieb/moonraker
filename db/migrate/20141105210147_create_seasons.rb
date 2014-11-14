@@ -7,6 +7,7 @@ class CreateSeasons < ActiveRecord::Migration
       t.integer   :runs_scored
       t.integer   :runs_allowed
       t.string    :percentage
+      t.text      :description
     end
   end
 end

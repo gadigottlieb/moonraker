@@ -9,7 +9,7 @@
 # puts 'CREATED ADMIN USER: ' << user.email
 User.destroy_all
 User.create(email: 'gadigottlieb@gmail.com', password: 'hello123', password_confirmation: 'hello123', name: 'Gadi Gottlieb', role: 2)
-
+Statistic.destroy_all
 Player.destroy_all
 Game.destroy_all
 Season.destroy_all
@@ -333,6 +333,24 @@ game_1 = Game.create({
   opponent_score: 4,
   win_result: true,
   date: "6-7-2014",
+  home_first_inning: 1,
+  home_second_inning: 1,
+  home_third_inning: 0,
+  home_fourth_inning: 0,
+  home_fifth_inning: 0,
+  home_sixth_inning: 0,
+  home_seventh_inning: 1,
+  home_eigth_inning: 8,
+  home_ninth_inning: 0,
+  opponent_first_inning: 1,
+  opponent_second_inning: 2,
+  opponent_third_inning: 0,
+  opponent_fourth_inning: 0,
+  opponent_fifth_inning: 0,
+  opponent_sixth_inning: 0,
+  opponent_seventh_inning: 1,
+  opponent_eigth_inning: 0,
+  opponent_ninth_inning: 0,
   season_id: twenty_fourteen.id
   })
 game_2 = Game.create({
@@ -341,6 +359,24 @@ game_2 = Game.create({
   opponent_score: 5,
   win_result: true,
   date: "13-7-2014",
+  home_first_inning: 6,
+  home_second_inning: 2,
+  home_third_inning: 3,
+  home_fourth_inning: 0,
+  home_fifth_inning: 7,
+  home_sixth_inning: 3,
+  home_seventh_inning: 2,
+  home_eigth_inning: 3,
+  home_ninth_inning: 0,
+  opponent_first_inning: 0,
+  opponent_second_inning: 0,
+  opponent_third_inning: 1,
+  opponent_fourth_inning: 0,
+  opponent_fifth_inning: 0,
+  opponent_sixth_inning: 1,
+  opponent_seventh_inning: 1,
+  opponent_eigth_inning: 2,
+  opponent_ninth_inning: 0,
   season_id: twenty_fourteen.id
   })
 game_3 = Game.create({
@@ -502,4 +538,371 @@ game_twelve_h = Game.create({
 ##############
 twenty_fourteen.players.push(dovi, gellis, leib, shai, jbomb, david, gadi, heshy, josh, mordechai, roni, isaacs, shalom, moshe, yaakov, kenny)
 twenty_thirteen.players.push(gellis, leib, shai, jbomb, david, gadi, heshy, josh, mordechai, roni, isaacs, shalom, moshe, willie, yaakov, kenny)
-twenty_twelve.players.push(gellis, leib, jbomb, david, gadi, heshy, josh, mordechai, roni, isaacs, shalom, moshe, willie, kenny)
+twenty_twelve.players.push(gellis, leib, jbomb, david, gadi, roni, isaacs, shalom, moshe, willie, kenny)
+
+################
+# Game 1 Stats #
+################
+kenny_game_one = Statistic.create({
+    played: true,
+    at_bats: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: kenny.id,
+    game_id: game_1.id,
+    season_id: twenty_fourteen.id
+  })
+gellis_game_one = Statistic.create({
+    played: true,
+    at_bats: 3,
+    runs: 1,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gellis.id,
+    game_id: game_1.id,
+    season_id: twenty_fourteen.id
+  })
+gadi_game_one = Statistic.create({
+    played: true,
+    at_bats: 4,
+    runs: 2,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 1,
+    rbis: 3,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gadi.id,
+    game_id: game_1.id,
+    season_id: twenty_fourteen.id
+  })
+david_game_one = Statistic.create({
+    played: true,
+    at_bats: 3,
+    runs: 1,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 1,
+    rbis: 3,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 1,
+    player_id: david.id,
+    game_id: game_1.id,
+    season_id: twenty_fourteen.id
+  })
+moshe_game_one = Statistic.create({
+    played: true,
+    at_bats: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 1,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 1,
+    sac_fly: 0,
+    player_id: moshe.id,
+    game_id: game_1.id,
+    season_id: twenty_fourteen.id
+  })
+shai_game_one = Statistic.create({
+    played: true,
+    at_bats: 4,
+    runs: 1,
+    hits: 3,
+    doubles: 1,
+    triples: 1,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shai.id,
+    game_id: game_1.id,
+    season_id: twenty_fourteen.id
+  })
+roni_game_one = Statistic.create({
+    played: true,
+    at_bats: 4,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: roni.id,
+    game_id: game_1.id,
+    season_id: twenty_fourteen.id
+  })
+jbomb_game_one = Statistic.create({
+    played: true,
+    at_bats: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 1,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: jbomb.id,
+    game_id: game_1.id,
+    season_id: twenty_fourteen.id
+  })
+leib_game_one = Statistic.create({
+    played: true,
+    at_bats: 3,
+    runs: 1,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 1,
+    sac_fly: 0,
+    player_id: leib.id,
+    game_id: game_1.id,
+    season_id: twenty_fourteen.id
+  })
+isaacs_game_one = Statistic.create({
+    played: true,
+    at_bats: 3,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: isaacs.id,
+    game_id: game_1.id,
+    season_id: twenty_fourteen.id
+  })
+shalom_game_one = Statistic.create({
+    played: true,
+    at_bats: 4,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shalom.id,
+    game_id: game_1.id,
+    season_id: twenty_fourteen.id
+  })
+game_1.players.push(kenny, gellis, gadi, david, moshe, shai, roni, jbomb, leib, isaacs, shalom)
+
+################
+# Game 2 Stats #
+################
+kenny_game_two = Statistic.create({
+    played: true,
+    at_bats: 5,
+    runs: 4,
+    hits: 3,
+    doubles: 2,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 2,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: kenny.id,
+    game_id: game_2.id,
+    season_id: twenty_fourteen.id
+  })
+gellis_game_two = Statistic.create({
+    played: true,
+    at_bats: 6,
+    runs: 4,
+    hits: 5,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 2,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gellis.id,
+    game_id: game_2.id,
+    season_id: twenty_fourteen.id
+  })
+gadi_game_two = Statistic.create({
+    played: true,
+    at_bats: 5,
+    runs: 4,
+    hits: 4,
+    doubles: 1,
+    triples: 0,
+    homers: 1,
+    rbis: 5,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gadi.id,
+    game_id: game_2.id,
+    season_id: twenty_fourteen.id
+  })
+david_game_two = Statistic.create({
+    played: true,
+    at_bats: 5,
+    runs: 4,
+    hits: 3,
+    doubles: 1,
+    triples: 0,
+    homers: 2,
+    rbis: 3,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: david.id,
+    game_id: game_2.id,
+    season_id: twenty_fourteen.id
+  })
+moshe_game_two = Statistic.create({
+    played: true,
+    at_bats: 5,
+    runs: 1,
+    hits: 3,
+    doubles: 0,
+    triples: 0,
+    homers: 1,
+    rbis: 5,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 1,
+    player_id: moshe.id,
+    game_id: game_2.id,
+    season_id: twenty_fourteen.id
+  })
+shai_game_two = Statistic.create({
+    played: true,
+    at_bats: 6,
+    runs: 4,
+    hits: 5,
+    doubles: 1,
+    triples: 1,
+    homers: 1,
+    rbis: 5,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shai.id,
+    game_id: game_2.id,
+    season_id: twenty_fourteen.id
+  })
+dovi_game_two = Statistic.create({
+    played: true,
+    at_bats: 6,
+    runs: 1,
+    hits: 3,
+    doubles: 0,
+    triples: 1,
+    homers: 0,
+    rbis: 3,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: dovi.id,
+    game_id: game_2.id,
+    season_id: twenty_fourteen.id
+  })
+jbomb_game_two = Statistic.create({
+    played: true,
+    at_bats: 6,
+    runs: 2,
+    hits: 3,
+    doubles: 0,
+    triples: 1,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: jbomb.id,
+    game_id: game_2.id,
+    season_id: twenty_fourteen.id
+  })
+roni_game_two = Statistic.create({
+    played: true,
+    at_bats: 6,
+    runs: 1,
+    hits: 2,
+    doubles: 0,
+    triples: 1,
+    homers: 1,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: roni.id,
+    game_id: game_2.id,
+    season_id: twenty_fourteen.id
+  })
+shalom_game_two = Statistic.create({
+    played: true,
+    at_bats: 4,
+    runs: 1,
+    hits: 2,
+    doubles: 0,
+    triples: 1,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shalom.id,
+    game_id: game_2.id,
+    season_id: twenty_fourteen.id
+  })
+game_2.players.push(kenny, gellis, gadi, david, moshe, shai, dovi, jbomb, roni, shalom)
