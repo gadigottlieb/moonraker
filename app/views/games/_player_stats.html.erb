@@ -1,0 +1,42 @@
+<table border="2">
+  <thead>
+    <tr>
+      <th>Moonrakers</th>
+      <th>AB</th>
+      <th>R</th>
+      <th>H</th>
+      <th>RBI</th>
+      <th>BB</th>
+      <th>SO</th>
+      <th>AVG</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @players.each do |player| %>
+      <tr>
+          <td class="player-name"><%= player.last_name %>, <%= player.first_name[0] %>, <%= player.primary_position %> </td>
+        <% player.statistics.map do |stat| %>
+          <td><%= stat.at_bats %></td>
+          <td><%= stat.runs %></td>
+          <td><%= stat.hits %></td>
+          <td><%= stat.rbis %></td>
+          <td><%= stat.walks %></td>
+          <td><%= stat.strikeouts %></td>
+          <td><%= stat.batting_avg(stat.hits, stat.at_bats) %></td>
+        <% end %>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+<span>
+  <b>BATTING</b>
+  <% @game.players.each do |player|%>
+    <% player.statistics.map do |stat| %>
+      <%= stat.check_for_doubles(stat.doubles) %>
+      <%= stat.check_for_triples(stat.triples) %>
+      <%= stat.check_for_homers(stat.homers) %>
+      <%= stat.check_for_rbis(stat.rbis) %>
+      <%= stat.check_for_sf(stat.sac_fly) %>
+    <% end %>
+  <% end %>
+</span>
