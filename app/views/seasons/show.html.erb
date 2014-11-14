@@ -1,4 +1,6 @@
-<%= link_to "Edit Season", edit_season_path(@season) %>
+<% if can? :update, @season %>
+  <%= link_to "Edit Season", edit_season_path(@season) %>
+<% end %>
 <h1><%= @season.year %></h1>
 <p>
   The Moonrakers won <%= @season.wins %> games in the <%= @season.year %> season.
@@ -21,8 +23,8 @@
   <tbody>
     <% @games.each do |game| %>
     <tr>
-        <th><%= game.date %></th>
-        <th><%= link_to game.opponent, game_path %></th>
+        <th><%= Date::MONTHNAMES[game.date.month] %> <%= game.date.day %>, <%= game.date.year %></th>
+        <th><%= link_to game.opponent, game_path(game) %></th>
         <th><%= game.home_score %></th>
         <th><%= game.opponent_score %></th>
       <% end %>
