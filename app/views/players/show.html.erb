@@ -15,9 +15,58 @@
 </div>
 <div id="player-info">
   <ul>
-    <li>Born: <strong><%= @player.birthday %></strong></li> |
+    <li>Born: <strong><%= Date::MONTHNAMES[@player.birthday.month] %> <%= @player.birthday.day %>, <%= @player.birthday.year %></strong></li> |
     <li>Bats/Throws: <strong><%= @player.bats %>/<%= @player.throws %></strong></li> |
     <li>Height: <strong><%= @player.height %></strong></li> |
     <li>Height: <strong><%= @player.weight %></strong></li>
   </ul>
 </div>
+<% if @player.statistics == [] %>
+  <%= "" %>
+<% else %>
+  <table border="2">
+    <caption>Regular Season Career Stats</caption>
+    <thead>
+      <tr>
+        <td>Year</td>
+        <td>G</td>
+        <td>AB</td>
+        <td>R</td>
+        <td>H</td>
+        <td>2B</td>
+        <td>3B</td>
+        <td>HR</td>
+        <td>RBI</td>
+        <td>BB</td>
+        <td>SO</td>
+        <td>SF</td>
+        <td>TB</td>
+        <td>AVG</td>
+        <td>OBP</td>
+        <td>SLG</td>
+        <td>OPS</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @player.total_at_bats(@player.statistics)%></td>
+        <td><%= @player.statistics.count %></td>
+        <td><%= @player.total_at_bats(@player.statistics)%></td>
+        <td><%= @player.total_runs(@player.statistics)  %></td>
+        <td><%= @player.total_hits(@player.statistics)  %></td>
+        <td><%= @player.total_doubles(@player.statistics)  %></td>
+        <td><%= @player.total_triples(@player.statistics)  %></td>
+        <td><%= @player.total_homers(@player.statistics)  %></td>
+        <td><%= @player.total_rbis(@player.statistics)  %></td>
+        <td><%= @player.total_walks(@player.statistics)  %></td>
+        <td><%= @player.total_strikeouts(@player.statistics)  %></td>
+        <td><%= @player.total_sac_fly(@player.statistics)  %></td>
+        <td><%= @player.total_bases %></td>
+        <td><%= @player.season_batting_avg %></td>
+        <td><%= @player.on_base_pct  %></td>
+        <td><%= @player.slugging_pct  %></td>
+        <td><%= @player.on_base_plus_slg %></td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
