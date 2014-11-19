@@ -55,7 +55,7 @@ class SeasonsController < ApplicationController
 
   private
   def season_params
-    params.require(:season).permit(:year, :wins, :losses, :runs_scored, :runs_allowed, :percentage, :description)
+    params.require(:season).permit(:year, :wins, :losses, :runs_scored, :runs_allowed, :description)
   end
 
 end
