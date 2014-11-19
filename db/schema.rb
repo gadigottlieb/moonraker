@@ -75,7 +75,6 @@ ActiveRecord::Schema.define(version: 20141114021002) do
     t.integer "losses"
     t.integer "runs_scored"
     t.integer "runs_allowed"
-    t.string  "percentage"
     t.text    "description"
   end
 
