@@ -2,7 +2,7 @@ class CreateStatistics < ActiveRecord::Migration
   def change
     create_table   :statistics do |t|
       t.boolean    :played
-      t.integer    :at_bats
+      t.integer    :plate_appearance
       t.integer    :runs
       t.integer    :hits
       t.integer    :doubles
