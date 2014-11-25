@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20141114021002) do
 
   create_table "statistics", force: true do |t|
     t.boolean "played"
-    t.integer "at_bats"
+    t.integer "plate_appearance"
     t.integer "runs"
     t.integer "hits"
     t.integer "doubles"
