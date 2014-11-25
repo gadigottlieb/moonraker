@@ -273,7 +273,7 @@ moshe = Player.create({
   photo: "gadigottlieb.JPG",
   description: "",
   height: "5'8",
-  weight: 200,
+  weight: 195,
   birthday: "11-5-1991"
   })
 
@@ -540,12 +540,12 @@ twenty_fourteen.players.push(dovi, gellis, leib, shai, jbomb, david, gadi, heshy
 twenty_thirteen.players.push(gellis, leib, shai, jbomb, david, gadi, heshy, josh, mordechai, roni, isaacs, shalom, moshe, willie, yaakov, kenny)
 twenty_twelve.players.push(gellis, leib, jbomb, david, gadi, roni, isaacs, shalom, moshe, willie, kenny)
 
-################
-# Game 1 Stats #
-################
+######################
+# Game 1  2014 Stats #
+######################
 kenny_game_one = Statistic.create({
     played: true,
-    at_bats: 4,
+    plate_appearance: 4,
     runs: 1,
     hits: 1,
     doubles: 0,
@@ -562,7 +562,7 @@ kenny_game_one = Statistic.create({
   })
 gellis_game_one = Statistic.create({
     played: true,
-    at_bats: 3,
+    plate_appearance: 3,
     runs: 1,
     hits: 2,
     doubles: 1,
@@ -579,7 +579,7 @@ gellis_game_one = Statistic.create({
   })
 gadi_game_one = Statistic.create({
     played: true,
-    at_bats: 4,
+    plate_appearance: 4,
     runs: 2,
     hits: 2,
     doubles: 0,
@@ -596,7 +596,7 @@ gadi_game_one = Statistic.create({
   })
 david_game_one = Statistic.create({
     played: true,
-    at_bats: 3,
+    plate_appearance: 3,
     runs: 1,
     hits: 2,
     doubles: 1,
@@ -613,7 +613,7 @@ david_game_one = Statistic.create({
   })
 moshe_game_one = Statistic.create({
     played: true,
-    at_bats: 4,
+    plate_appearance: 4,
     runs: 1,
     hits: 1,
     doubles: 0,
@@ -630,7 +630,7 @@ moshe_game_one = Statistic.create({
   })
 shai_game_one = Statistic.create({
     played: true,
-    at_bats: 4,
+    plate_appearance: 4,
     runs: 1,
     hits: 3,
     doubles: 1,
@@ -647,7 +647,7 @@ shai_game_one = Statistic.create({
   })
 roni_game_one = Statistic.create({
     played: true,
-    at_bats: 4,
+    plate_appearance: 4,
     runs: 0,
     hits: 0,
     doubles: 0,
@@ -664,7 +664,7 @@ roni_game_one = Statistic.create({
   })
 jbomb_game_one = Statistic.create({
     played: true,
-    at_bats: 4,
+    plate_appearance: 4,
     runs: 1,
     hits: 1,
     doubles: 0,
@@ -681,7 +681,7 @@ jbomb_game_one = Statistic.create({
   })
 leib_game_one = Statistic.create({
     played: true,
-    at_bats: 3,
+    plate_appearance: 3,
     runs: 1,
     hits: 2,
     doubles: 1,
@@ -698,7 +698,7 @@ leib_game_one = Statistic.create({
   })
 isaacs_game_one = Statistic.create({
     played: true,
-    at_bats: 3,
+    plate_appearance: 3,
     runs: 0,
     hits: 0,
     doubles: 0,
@@ -715,7 +715,7 @@ isaacs_game_one = Statistic.create({
   })
 shalom_game_one = Statistic.create({
     played: true,
-    at_bats: 4,
+    plate_appearance: 4,
     runs: 0,
     hits: 0,
     doubles: 0,
@@ -732,12 +732,12 @@ shalom_game_one = Statistic.create({
   })
 game_1.players.push(kenny, gellis, gadi, david, moshe, shai, roni, jbomb, leib, isaacs, shalom)
 
-################
-# Game 2 Stats #
-################
+#####################
+# Game 2 2014 Stats #
+#####################
 kenny_game_two = Statistic.create({
     played: true,
-    at_bats: 5,
+    plate_appearance: 5,
     runs: 4,
     hits: 3,
     doubles: 2,
@@ -754,7 +754,7 @@ kenny_game_two = Statistic.create({
   })
 gellis_game_two = Statistic.create({
     played: true,
-    at_bats: 6,
+    plate_appearance: 6,
     runs: 4,
     hits: 5,
     doubles: 1,
@@ -771,7 +771,7 @@ gellis_game_two = Statistic.create({
   })
 gadi_game_two = Statistic.create({
     played: true,
-    at_bats: 5,
+    plate_appearance: 5,
     runs: 4,
     hits: 4,
     doubles: 1,
@@ -788,7 +788,7 @@ gadi_game_two = Statistic.create({
   })
 david_game_two = Statistic.create({
     played: true,
-    at_bats: 5,
+    plate_appearance: 5,
     runs: 4,
     hits: 3,
     doubles: 1,
@@ -805,7 +805,7 @@ david_game_two = Statistic.create({
   })
 moshe_game_two = Statistic.create({
     played: true,
-    at_bats: 5,
+    plate_appearance: 5,
     runs: 1,
     hits: 3,
     doubles: 0,
@@ -822,7 +822,7 @@ moshe_game_two = Statistic.create({
   })
 shai_game_two = Statistic.create({
     played: true,
-    at_bats: 6,
+    plate_appearance: 6,
     runs: 4,
     hits: 5,
     doubles: 1,
@@ -839,7 +839,7 @@ shai_game_two = Statistic.create({
   })
 dovi_game_two = Statistic.create({
     played: true,
-    at_bats: 6,
+    plate_appearance: 6,
     runs: 1,
     hits: 3,
     doubles: 0,
@@ -856,7 +856,7 @@ dovi_game_two = Statistic.create({
   })
 jbomb_game_two = Statistic.create({
     played: true,
-    at_bats: 6,
+    plate_appearance: 6,
     runs: 2,
     hits: 3,
     doubles: 0,
@@ -873,7 +873,7 @@ jbomb_game_two = Statistic.create({
   })
 roni_game_two = Statistic.create({
     played: true,
-    at_bats: 6,
+    plate_appearance: 6,
     runs: 1,
     hits: 2,
     doubles: 0,
@@ -890,7 +890,7 @@ roni_game_two = Statistic.create({
   })
 shalom_game_two = Statistic.create({
     played: true,
-    at_bats: 4,
+    plate_appearance: 4,
     runs: 1,
     hits: 2,
     doubles: 0,
@@ -906,3 +906,1896 @@ shalom_game_two = Statistic.create({
     season_id: twenty_fourteen.id
   })
 game_2.players.push(kenny, gellis, gadi, david, moshe, shai, dovi, jbomb, roni, shalom)
+#####################
+# Game 3 2014 Stats #
+#####################
+kenny_game_three = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 1,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: kenny.id,
+    game_id: game_3.id,
+    season_id: twenty_fourteen.id
+  })
+gellis_game_three = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 1,
+    hits: 1,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gellis.id,
+    game_id: game_3.id,
+    season_id: twenty_fourteen.id
+  })
+gadi_game_three = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 3,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 1,
+    rbis: 4,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gadi.id,
+    game_id: game_3.id,
+    season_id: twenty_fourteen.id
+  })
+david_game_three = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 4,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 3,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: david.id,
+    game_id: game_3.id,
+    season_id: twenty_fourteen.id
+  })
+moshe_game_three = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 2,
+    hits: 3,
+    doubles: 1,
+    triples: 1,
+    homers: 0,
+    rbis: 3,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 1,
+    player_id: moshe.id,
+    game_id: game_3.id,
+    season_id: twenty_fourteen.id
+  })
+dovi_game_three = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 2,
+    hits: 4,
+    doubles: 2,
+    triples: 1,
+    homers: 0,
+    rbis: 4,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: dovi.id,
+    game_id: game_3.id,
+    season_id: twenty_fourteen.id
+  })
+jbomb_game_three = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 3,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: jbomb.id,
+    game_id: game_3.id,
+    season_id: twenty_fourteen.id
+  })
+roni_game_three = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 2,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: roni.id,
+    game_id: game_3.id,
+    season_id: twenty_fourteen.id
+  })
+isaacs_game_three = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: isaacs.id,
+    game_id: game_3.id,
+    season_id: twenty_fourteen.id
+  })
+shalom_game_three = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shalom.id,
+    game_id: game_3.id,
+    season_id: twenty_fourteen.id
+  })
+game_3.players.push(kenny, gellis, gadi, david, moshe, dovi, jbomb, roni, isaacs, shalom)
+#####################
+# Game 4 2014 Stats #
+#####################
+kenny_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 1,
+    hits: 3,
+    doubles: 1,
+    triples: 1,
+    homers: 0,
+    rbis: 3,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: kenny.id,
+    game_id: game_4.id,
+    season_id: twenty_fourteen.id
+  })
+gellis_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gellis.id,
+    game_id: game_4.id,
+    season_id: twenty_fourteen.id
+  })
+gadi_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 1,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gadi.id,
+    game_id: game_4.id,
+    season_id: twenty_fourteen.id
+  })
+david_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 2,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: david.id,
+    game_id: game_4.id,
+    season_id: twenty_fourteen.id
+  })
+moshe_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: moshe.id,
+    game_id: game_4.id,
+    season_id: twenty_fourteen.id
+  })
+dovi_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 2,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: dovi.id,
+    game_id: game_4.id,
+    season_id: twenty_fourteen.id
+  })
+jbomb_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: jbomb.id,
+    game_id: game_4.id,
+    season_id: twenty_fourteen.id
+  })
+yaakov_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 3,
+    hits: 3,
+    doubles: 0,
+    triples: 0,
+    homers: 1,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: yaakov.id,
+    game_id: game_4.id,
+    season_id: twenty_fourteen.id
+  })
+roni_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 2,
+    hits: 3,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: roni.id,
+    game_id: game_4.id,
+    season_id: twenty_fourteen.id
+  })
+leib_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 2,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: leib.id,
+    game_id: game_4.id,
+    season_id: twenty_fourteen.id
+  })
+isaacs_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 2,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: isaacs.id,
+    game_id: game_4.id,
+    season_id: twenty_fourteen.id
+  })
+shalom_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 2,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shalom.id,
+    game_id: game_4.id,
+    season_id: twenty_fourteen.id
+  })
+game_4.players.push(kenny, gellis, gadi, david, moshe, dovi, jbomb, yaakov, roni, leib, isaacs, shalom)
+#####################
+# Game 5 2014 Stats #
+#####################
+roni_game_five = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: roni.id,
+    game_id: game_5.id,
+    season_id: twenty_fourteen.id
+  })
+gadi_game_five = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 2,
+    hits: 3,
+    doubles: 2,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gadi.id,
+    game_id: game_5.id,
+    season_id: twenty_fourteen.id
+  })
+josh_game_five = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 2,
+    doubles: 0,
+    triples: 1,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: josh.id,
+    game_id: game_5.id,
+    season_id: twenty_fourteen.id
+  })
+david_game_five = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 4,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 1,
+    rbis: 2,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: david.id,
+    game_id: game_5.id,
+    season_id: twenty_fourteen.id
+  })
+gellis_game_five = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 2,
+    hits: 3,
+    doubles: 1,
+    triples: 0,
+    homers: 1,
+    rbis: 4,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gellis.id,
+    game_id: game_5.id,
+    season_id: twenty_fourteen.id
+  })
+moshe_game_five = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: moshe.id,
+    game_id: game_5.id,
+    season_id: twenty_fourteen.id
+  })
+dovi_game_five = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 2,
+    doubles: 2,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: dovi.id,
+    game_id: game_5.id,
+    season_id: twenty_fourteen.id
+  })
+leib_game_five = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: leib.id,
+    game_id: game_5.id,
+    season_id: twenty_fourteen.id
+  })
+isaacs_game_five = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: isaacs.id,
+    game_id: game_5.id,
+    season_id: twenty_fourteen.id
+  })
+shalom_game_five = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shalom.id,
+    game_id: game_5.id,
+    season_id: twenty_fourteen.id
+  })
+game_5.players.push(roni, gadi, josh, david, shai, gellis, moshe, dovi, leib, isaacs, shalom)
+#####################
+# Game 6 2014 Stats #
+#####################
+gellis_game_six = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 3,
+    hits: 3,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gellis.id,
+    game_id: game_6.id,
+    season_id: twenty_fourteen.id
+  })
+shai_game_six = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 3,
+    hits: 3,
+    doubles: 1,
+    triples: 1,
+    homers: 0,
+    rbis: 4,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shai.id,
+    game_id: game_6.id,
+    season_id: twenty_fourteen.id
+  })
+gadi_game_six = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 4,
+    hits: 4,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gadi.id,
+    game_id: game_6.id,
+    season_id: twenty_fourteen.id
+  })
+david_game_six = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 4,
+    hits: 4,
+    doubles: 2,
+    triples: 0,
+    homers: 2,
+    rbis: 6,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: david.id,
+    game_id: game_6.id,
+    season_id: twenty_fourteen.id
+  })
+moshe_game_six = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 1,
+    hits: 4,
+    doubles: 0,
+    triples: 0,
+    homers: 1,
+    rbis: 4,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: moshe.id,
+    game_id: game_6.id,
+    season_id: twenty_fourteen.id
+  })
+dovi_game_six = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 1,
+    sac_fly: 1,
+    player_id: dovi.id,
+    game_id: game_6.id,
+    season_id: twenty_fourteen.id
+  })
+jbomb_game_four = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 1,
+    hits: 3,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: jbomb.id,
+    game_id: game_6.id,
+    season_id: twenty_fourteen.id
+  })
+roni_game_six = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 2,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: roni.id,
+    game_id: game_6.id,
+    season_id: twenty_fourteen.id
+  })
+leib_game_six = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 1,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 1,
+    sac_fly: 0,
+    player_id: leib.id,
+    game_id: game_6.id,
+    season_id: twenty_fourteen.id
+  })
+isaacs_game_six = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 1,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: isaacs.id,
+    game_id: game_6.id,
+    season_id: twenty_fourteen.id
+  })
+shalom_game_six = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shalom.id,
+    game_id: game_6.id,
+    season_id: twenty_fourteen.id
+  })
+game_6.players.push(gellis, shai, gadi, david, moshe, dovi, jbomb, roni, leib, isaacs, shalom)
+######################
+# Game 1  2013 Stats #
+######################
+kenny_game_one_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 2,
+    hits: 1,
+    doubles: 0,
+    triples: 1,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 1,
+    player_id: kenny.id,
+    game_id: game_thirteen_a.id,
+    season_id: twenty_thirteen.id
+  })
+shai_game_one_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 3,
+    hits: 3,
+    doubles: 1,
+    triples: 2,
+    homers: 0,
+    rbis: 3,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 1,
+    player_id: shai.id,
+    game_id: game_thirteen_a.id,
+    season_id: twenty_thirteen.id
+  })
+gadi_game_one_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 3,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 4,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 1,
+    player_id: gadi.id,
+    game_id: game_thirteen_a.id,
+    season_id: twenty_thirteen.id
+  })
+david_game_one_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 2,
+    sac_fly: 0,
+    player_id: david.id,
+    game_id: game_thirteen_a.id,
+    season_id: twenty_thirteen.id
+  })
+moshe_game_one_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 1,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: moshe.id,
+    game_id: game_thirteen_a.id,
+    season_id: twenty_thirteen.id
+  })
+gellis_game_one_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 2,
+    hits: 2,
+    doubles: 2,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gellis.id,
+    game_id: game_thirteen_a.id,
+    season_id: twenty_thirteen.id
+  })
+willie_game_one_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: willie.id,
+    game_id: game_thirteen_a.id,
+    season_id: twenty_thirteen.id
+  })
+jbomb_game_one_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 2,
+    player_id: jbomb.id,
+    game_id: game_thirteen_a.id,
+    season_id: twenty_thirteen.id
+  })
+isaacs_game_one_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: isaacs.id,
+    game_id: game_thirteen_a.id,
+    season_id: twenty_thirteen.id
+  })
+leib_game_one_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 2,
+    sac_fly: 0,
+    player_id: leib.id,
+    game_id: game_thirteen_a.id,
+    season_id: twenty_thirteen.id
+  })
+shalom_game_one_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shalom.id,
+    game_id: game_thirteen_a.id,
+    season_id: twenty_thirteen.id
+  })
+roni_game_one_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 2,
+    hits: 2,
+    doubles: 0,
+    triples: 2,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 1,
+    sac_fly: 0,
+    player_id: roni.id,
+    game_id: game_thirteen_a.id,
+    season_id: twenty_thirteen.id
+  })
+game_thirteen_a.players.push(kenny, shai, gadi, david, moshe, gellis, willie, jbomb, isaacs, leib, shalom, roni)
+######################
+# Game 2  2013 Stats #
+######################
+kenny_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: kenny.id,
+    game_id: game_thirteen_b.id,
+    season_id: twenty_thirteen.id
+  })
+shai_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 2,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shai.id,
+    game_id: game_thirteen_b.id,
+    season_id: twenty_thirteen.id
+  })
+gadi_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 1,
+    hits: 3,
+    doubles: 2,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gadi.id,
+    game_id: game_thirteen_b.id,
+    season_id: twenty_thirteen.id
+  })
+david_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 1,
+    hits: 1,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: david.id,
+    game_id: game_thirteen_b.id,
+    season_id: twenty_thirteen.id
+  })
+moshe_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 1,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: moshe.id,
+    game_id: game_thirteen_b.id,
+    season_id: twenty_thirteen.id
+  })
+gellis_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 1,
+    player_id: gellis.id,
+    game_id: game_thirteen_b.id,
+    season_id: twenty_thirteen.id
+  })
+willie_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 1,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: willie.id,
+    game_id: game_thirteen_b.id,
+    season_id: twenty_thirteen.id
+  })
+jbomb_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: jbomb.id,
+    game_id: game_thirteen_b.id,
+    season_id: twenty_thirteen.id
+  })
+isaacs_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 1,
+    hits: 1,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: isaacs.id,
+    game_id: game_thirteen_b.id,
+    season_id: twenty_thirteen.id
+  })
+leib_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: leib.id,
+    game_id: game_thirteen_b.id,
+    season_id: twenty_thirteen.id
+  })
+shalom_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 1,
+    player_id: shalom.id,
+    game_id: game_thirteen_b.id,
+    season_id: twenty_thirteen.id
+  })
+roni_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: roni.id,
+    game_id: game_thirteen_b.id,
+    season_id: twenty_thirteen.id
+  })
+game_thirteen_b.players.push(kenny, shai, gadi, david, moshe, gellis, willie, jbomb, isaacs, leib, shalom, roni)
+######################
+# Game 3  2013 Stats #
+######################
+kenny_game_three_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 7,
+    runs: 2,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 2,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: kenny.id,
+    game_id: game_thirteen_c.id,
+    season_id: twenty_thirteen.id
+  })
+gellis_game_three_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 6,
+    runs: 1,
+    hits: 1,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 2,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gellis.id,
+    game_id: game_thirteen_c.id,
+    season_id: twenty_thirteen.id
+  })
+gadi_game_three_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 6,
+    runs: 4,
+    hits: 5,
+    doubles: 0,
+    triples: 0,
+    homers: 1,
+    rbis: 3,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gadi.id,
+    game_id: game_thirteen_c.id,
+    season_id: twenty_thirteen.id
+  })
+david_game_three_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 6,
+    runs: 3,
+    hits: 3,
+    doubles: 0,
+    triples: 0,
+    homers: 1,
+    rbis: 3,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: david.id,
+    game_id: game_thirteen_c.id,
+    season_id: twenty_thirteen.id
+  })
+moshe_game_three_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 6,
+    runs: 3,
+    hits: 5,
+    doubles: 0,
+    triples: 2,
+    homers: 0,
+    rbis: 4,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: moshe.id,
+    game_id: game_thirteen_c.id,
+    season_id: twenty_thirteen.id
+  })
+willie_game_three_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 6,
+    runs: 2,
+    hits: 3,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 3,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: willie.id,
+    game_id: game_thirteen_c.id,
+    season_id: twenty_thirteen.id
+  })
+jbomb_game_three_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 6,
+    runs: 1,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: jbomb.id,
+    game_id: game_thirteen_c.id,
+    season_id: twenty_thirteen.id
+  })
+isaacs_game_three_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 6,
+    runs: 1,
+    hits: 3,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: isaacs.id,
+    game_id: game_thirteen_c.id,
+    season_id: twenty_thirteen.id
+  })
+shalom_game_three_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 6,
+    runs: 2,
+    hits: 3,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shalom.id,
+    game_id: game_thirteen_c.id,
+    season_id: twenty_thirteen.id
+  })
+roni_game_three_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 6,
+    runs: 2,
+    hits: 4,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 3,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 1,
+    player_id: roni.id,
+    game_id: game_thirteen_c.id,
+    season_id: twenty_thirteen.id
+  })
+game_thirteen_c.players.push(kenny, gellis, gadi, david, moshe, willie, jbomb, isaacs, shalom, roni)
+######################
+# Game 4  2013 Stats #
+######################
+kenny_game_four_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 4,
+    hits: 4,
+    doubles: 2,
+    triples: 1,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: kenny.id,
+    game_id: game_thirteen_d.id,
+    season_id: twenty_thirteen.id
+  })
+shai_game_two_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 3,
+    hits: 2,
+    doubles: 1,
+    triples: 1,
+    homers: 0,
+    rbis: 3,
+    walks: 2,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shai.id,
+    game_id: game_thirteen_d.id,
+    season_id: twenty_thirteen.id
+  })
+gadi_game_four_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 3,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 1,
+    rbis: 3,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 1,
+    player_id: gadi.id,
+    game_id: game_thirteen_d.id,
+    season_id: twenty_thirteen.id
+  })
+david_game_four_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 1,
+    hits: 4,
+    doubles: 2,
+    triples: 1,
+    homers: 1,
+    rbis: 6,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: david.id,
+    game_id: game_thirteen_d.id,
+    season_id: twenty_thirteen.id
+  })
+moshe_game_four_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: moshe.id,
+    game_id: game_thirteen_d.id,
+    season_id: twenty_thirteen.id
+  })
+gellis_game_four_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 3,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 2,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gellis.id,
+    game_id: game_thirteen_d.id,
+    season_id: twenty_thirteen.id
+  })
+willie_game_four_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: willie.id,
+    game_id: game_thirteen_d.id,
+    season_id: twenty_thirteen.id
+  })
+jbomb_game_four_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: jbomb.id,
+    game_id: game_thirteen_d.id,
+    season_id: twenty_thirteen.id
+  })
+yaakov_game_four_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 3,
+    doubles: 2,
+    triples: 0,
+    homers: 0,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: yaakov.id,
+    game_id: game_thirteen_d.id,
+    season_id: twenty_thirteen.id
+  })
+shalom_game_four_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 2,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shalom.id,
+    game_id: game_thirteen_d.id,
+    season_id: twenty_thirteen.id
+  })
+roni_game_four_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: roni.id,
+    game_id: game_thirteen_d.id,
+    season_id: twenty_thirteen.id
+  })
+game_thirteen_d.players.push(kenny, shai, gadi, david, moshe, gellis, willie, jbomb, yaakov, shalom, roni)
+######################
+# Game 5  2013 Stats #
+######################
+gellis_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 2,
+    doubles: 0,
+    triples: 1,
+    homers: 0,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gellis.id,
+    game_id: game_thirteen_e.id,
+    season_id: twenty_thirteen.id
+  })
+yaakov_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: yaakov.id,
+    game_id: game_thirteen_e.id,
+    season_id: twenty_thirteen.id
+  })
+gadi_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gadi.id,
+    game_id: game_thirteen_e.id,
+    season_id: twenty_thirteen.id
+  })
+david_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 1,
+    rbis: 2,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: david.id,
+    game_id: game_thirteen_e.id,
+    season_id: twenty_thirteen.id
+  })
+moshe_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: moshe.id,
+    game_id: game_thirteen_e.id,
+    season_id: twenty_thirteen.id
+  })
+willie_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: willie.id,
+    game_id: game_thirteen_e.id,
+    season_id: twenty_thirteen.id
+  })
+jbomb_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: jbomb.id,
+    game_id: game_thirteen_e.id,
+    season_id: twenty_thirteen.id
+  })
+roni_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 1,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 1,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: roni.id,
+    game_id: game_thirteen_e.id,
+    season_id: twenty_thirteen.id
+  })
+isaacs_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 1,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: isaacs.id,
+    game_id: game_thirteen_e.id,
+    season_id: twenty_thirteen.id
+  })
+leib_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 1,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: leib.id,
+    game_id: game_thirteen_e.id,
+    season_id: twenty_thirteen.id
+  })
+shalom_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 3,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shalom.id,
+    game_id: game_thirteen_e.id,
+    season_id: twenty_thirteen.id
+  })
+game_thirteen_e.players.push(gellis, yaakov, gadi, david, moshe, willie, jbomb, roni, isaacs, leib, shalom)
+######################
+# Game 6  2013 Stats #
+######################
+roni_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: roni.id,
+    game_id: game_thirteen_f.id,
+    season_id: twenty_thirteen.id
+  })
+gellis_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 2,
+    hits: 2,
+    doubles: 0,
+    triples: 1,
+    homers: 1,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gellis.id,
+    game_id: game_thirteen_f.id,
+    season_id: twenty_thirteen.id
+  })
+gadi_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 1,
+    hits: 3,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: gadi.id,
+    game_id: game_thirteen_f.id,
+    season_id: twenty_thirteen.id
+  })
+david_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 5,
+    runs: 2,
+    hits: 2,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: david.id,
+    game_id: game_thirteen_f.id,
+    season_id: twenty_thirteen.id
+  })
+moshe_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 3,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 2,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: moshe.id,
+    game_id: game_thirteen_f.id,
+    season_id: twenty_thirteen.id
+  })
+willie_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 1,
+    sac_fly: 0,
+    player_id: willie.id,
+    game_id: game_thirteen_f.id,
+    season_id: twenty_thirteen.id
+  })
+jbomb_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 2,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: jbomb.id,
+    game_id: game_thirteen_f.id,
+    season_id: twenty_thirteen.id
+  })
+isaacs_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: isaacs.id,
+    game_id: game_thirteen_f.id,
+    season_id: twenty_thirteen.id
+  })
+leib_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 1,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: leib.id,
+    game_id: game_thirteen_f.id,
+    season_id: twenty_thirteen.id
+  })
+shalom_game_five_twnty_thirteen = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 1,
+    doubles: 1,
+    triples: 0,
+    homers: 0,
+    rbis: 0,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 0,
+    player_id: shalom.id,
+    game_id: game_thirteen_f.id,
+    season_id: twenty_thirteen.id
+  })
+game_thirteen_f.players.push(roni, gellis, gadi, david, moshe, willie, jbomb, isaacs, leib, shalom)
