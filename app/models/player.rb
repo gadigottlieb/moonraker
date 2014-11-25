@@ -3,24 +3,6 @@ class Player < ActiveRecord::Base
   has_and_belongs_to_many :games
   has_many :statistics
 
-  attr_reader :total_at_bats, :total_hits, :total_doubles, :total_triples, :total_homers, :total_rbis, :total_walks, :total_strikeouts, :total_sac_fly, :on_base_pct, :slugging_pct, :on_base_plus_slug
-
-  def initialize(total_at_bats, total_hits, total_doubles, total_triples, total_homers, total_rbis, total_walks, total_strikeouts, total_sac_fly, on_base_pct, slugging_pct, on_base_plus_slug)
-    @total_at_bats = total_at_bats
-    @total_runs = total_runs
-    @total_hits = total_hits
-    @total_doubles = total_doubles
-    @total_triples = total_triples
-    @total_homers = total_homers
-    @total_rbis = total_rbis
-    @total_walks = total_walks
-    @total_strikeouts = total_strikeouts
-    @total_sac_fly = total_sac_fly
-    @on_base_pct = on_base_pct
-    @slugging_pct = slugging_pct
-    @on_base_plus_slug = on_base_plus_slug
-  end
-
   def format_date(date)
     month = Date::MONTHNAMES[date.month]
     day = date.day
@@ -28,12 +10,20 @@ class Player < ActiveRecord::Base
     month[0..2].to_s + " " + day.to_s + ", " + year.to_s
   end
 
-  def total_at_bats(array)
-    total_at_bats = array.map do |attribute|
-      attribute.at_bats
+  def year(array)
+    year = array.map do |attribute|
+      attribute.season_id
     end
-    @total_at_bats = total_at_bats.inject(:+)
+    @year = Season.find(year)[0]
   end
+
+  def total_plate_appearance(array)
+    total_plate_appearance = array.map do |attribute|
+      attribute.plate_appearance
+    end
+    @total_plate_appearance = total_plate_appearance.inject(:+)
+  end
+
 
   def total_runs(array)
     total_runs = array.map do |attribute|
@@ -98,6 +88,10 @@ class Player < ActiveRecord::Base
     @total_sac_fly = total_sac_fly.inject(:+)
   end
 
+  def total_at_bats(plate_appearance, walks, sac_fly)
+    @total_at_bats = plate_appearance - (walks + sac_fly)
+  end
+
   def season_batting_avg
     string = (@total_hits.to_f / @total_at_bats.to_f).round(3)
     sprintf('%.3f', string)
@@ -121,7 +115,30 @@ class Player < ActiveRecord::Base
   def on_base_plus_slg
     @on_base_plus_slug = @slugging_pct + @on_base_pct
     sprintf('%.3f', @on_base_plus_slug)
+  end
 
+  def season_plate_appearances(all_stats, all_seasons, player)
+    array = []
+    all_seasons.map do |season|
+      all_stats.map do |stat|
+         if stat.season_id == season.id && stat.player_id == player.id
+          array.push(stat.plate_appearance)
+        end
+      end
+    end
+    @season_player_plate_appearances = array.inject(:+)
+  end
+
+  def season_runs(all_stats, all_seasons, player)
+    array = []
+    all_seasons.map do |season|
+      all_stats.map do |stat|
+        if stat.season_id == season.id && stat.player_id == player.id
+          array.push(stat.runs)
+        end
+      end
+    end
+    @season_player_runs = array.inject(:+)
   end
 
 end
