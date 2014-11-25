@@ -1,0 +1,20 @@
+<tr>
+  <td>Totals</td>
+  <td><%= @player.statistics.count %></td>
+  <td><%= @player.total_plate_appearance(@player.statistics)%></td>
+  <td><%= @player.total_at_bats(@player.total_plate_appearance(@player.statistics), @player.total_walks(@player.statistics), @player.total_sac_fly(@player.statistics))%></td>
+  <td><%= @player.total_runs(@player.statistics)  %></td>
+  <td><%= @player.total_hits(@player.statistics)  %></td>
+  <td><%= @player.total_doubles(@player.statistics)  %></td>
+  <td><%= @player.total_triples(@player.statistics)  %></td>
+  <td><%= @player.total_homers(@player.statistics)  %></td>
+  <td><%= @player.total_rbis(@player.statistics)  %></td>
+  <td><%= @player.total_walks(@player.statistics)  %></td>
+  <td><%= @player.total_strikeouts(@player.statistics)  %></td>
+  <td><%= @player.total_sac_fly(@player.statistics)  %></td>
+  <td><%= @player.total_bases %></td>
+  <td><%= @player.season_batting_avg %></td>
+  <td><%= @player.on_base_pct  %></td>
+  <td><%= @player.slugging_pct  %></td>
+  <td><%= @player.on_base_plus_slg %></td>
+</tr>

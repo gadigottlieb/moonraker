@@ -17,7 +17,7 @@
   <ul>
     <li>Born: <strong><%= Date::MONTHNAMES[@player.birthday.month] %> <%= @player.birthday.day %>, <%= @player.birthday.year %></strong></li> |
     <li>Bats/Throws: <strong><%= @player.bats %>/<%= @player.throws %></strong></li> |
-    <li>Height: <strong><%= @player.height %></strong></li> |
+    <li>Height: <strong><%= @player.height %>"</strong></li> |
     <li>Height: <strong><%= @player.weight %></strong></li>
   </ul>
 </div>
@@ -30,6 +30,7 @@
       <tr>
         <td>Year</td>
         <td>G</td>
+        <td>PA</td>
         <td>AB</td>
         <td>R</td>
         <td>H</td>
@@ -48,25 +49,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><%= @player.total_at_bats(@player.statistics)%></td>
-        <td><%= @player.statistics.count %></td>
-        <td><%= @player.total_at_bats(@player.statistics)%></td>
-        <td><%= @player.total_runs(@player.statistics)  %></td>
-        <td><%= @player.total_hits(@player.statistics)  %></td>
-        <td><%= @player.total_doubles(@player.statistics)  %></td>
-        <td><%= @player.total_triples(@player.statistics)  %></td>
-        <td><%= @player.total_homers(@player.statistics)  %></td>
-        <td><%= @player.total_rbis(@player.statistics)  %></td>
-        <td><%= @player.total_walks(@player.statistics)  %></td>
-        <td><%= @player.total_strikeouts(@player.statistics)  %></td>
-        <td><%= @player.total_sac_fly(@player.statistics)  %></td>
-        <td><%= @player.total_bases %></td>
-        <td><%= @player.season_batting_avg %></td>
-        <td><%= @player.on_base_pct  %></td>
-        <td><%= @player.slugging_pct  %></td>
-        <td><%= @player.on_base_plus_slg %></td>
-      </tr>
+      <%= render 'season_player_stats' %>
+      <%= render 'total_player_stats' %>
     </tbody>
   </table>
 <% end %>
