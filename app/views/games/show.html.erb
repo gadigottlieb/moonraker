@@ -1,7 +1,7 @@
 <table>
   <thead>
     <tr>
-      <th><%= Date::MONTHNAMES[@game.date.month] %> <%= @game.date.day %>, <%= @game.date.year %></th>
+      <th><%= @game.form_date(@game.date) %></th>
       <th>1</th>
       <th>2</th>
       <th>3</th>
@@ -13,7 +13,6 @@
       <th>9</th>
       <th>R</th>
       <th>H</th>
-      <th>E</th>
     </tr>
   </thead>
   <tbody>
@@ -28,8 +27,8 @@
       <td><%= @game.opponent_seventh_inning  %></td>
       <td><%= @game.opponent_eigth_inning  %></td>
       <td><%= @game.opponent_ninth_inning  %></td>
-      <td><strong><%= @game.opponent_score %></strong>
-      </td>
+      <td><strong><%= @game.opponent_score %></strong></td>
+      <td><strong><%= @game.opponent_score %></strong></td>
     </tr>
     <tr class="moonrakers">
       <th>Moonrakers</th>
@@ -43,6 +42,7 @@
       <td><%= @game.home_eigth_inning  %></td>
       <td><%= @game.home_ninth_inning  %></td>
       <td><strong><%= @game.home_score %></strong></td>
+      <td><strong><%= @game.team_hits(@game) %></strong></td>
     </tr>
   </tbody>
 </table>
