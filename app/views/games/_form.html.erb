@@ -1,0 +1,22 @@
+<%= form_for @game do |f| %>
+  <%= f.hidden_field(:season_id, value: @game.season_id) %>
+  <%= f.label :opponent  %>
+  <%= f.text_field :opponent %>
+
+  <%= f.label :opponent_score %>
+  <%= f.number_field :opponent_score %>
+
+  <%= f.label :home_score %>
+  <%= f.number_field :home_score %>
+
+  <%= f.fields_for :statistics do |stat| %>
+    <%= stat.label :player %>
+    <%= stat.collection_select(:player_id, @season.players, :id, :name, {}, multiple: true) %>
+    <table>
+      <tr>
+        <%= stat.number_field :hits, placeholder: 'hits' %>
+      </tr>
+    </table>
+  <% end %>
+    <%= f.submit %>
+<% end %>
