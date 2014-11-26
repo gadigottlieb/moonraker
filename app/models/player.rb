@@ -3,7 +3,18 @@ class Player < ActiveRecord::Base
   has_and_belongs_to_many :games
   has_many :statistics
 
-  def format_date(date)
+  def name
+    "#{first_name} #{last_name}"
+  end
+
+  def full_birthday(date)
+    month = Date::MONTHNAMES[date.month]
+    day = date.day
+    year = date.year
+    month.to_s + " " + day.to_s + ", " + year.to_s
+  end
+
+  def shorten_birthday(date)
     month = Date::MONTHNAMES[date.month]
     day = date.day
     year = date.year
@@ -17,128 +28,164 @@ class Player < ActiveRecord::Base
     @year = Season.find(year)[0]
   end
 
-  def total_plate_appearance(array)
-    total_plate_appearance = array.map do |attribute|
-      attribute.plate_appearance
+  def total_games(season = nil)
+    if season
+      total_games ||= statistics.where(season_id: season).count
+    else
+      total_plate_appearance ||= statistics.count
     end
-    @total_plate_appearance = total_plate_appearance.inject(:+)
   end
 
-
-  def total_runs(array)
-    total_runs = array.map do |attribute|
-      attribute.runs
+  def total_plate_appearance(season = nil)
+    if season
+      total_plate_appearance ||= statistics.where(season_id: season).sum(:plate_appearance)
+    else
+      total_plate_appearance ||= statistics.sum(:plate_appearance)
     end
-    @total_runs = total_runs.inject(:+)
   end
 
-  def total_hits(array)
-    total_hits = array.map do |attribute|
-      attribute.hits
+  def total_runs(season = nil)
+    if season
+      total_runs ||= statistics.where(season_id: season).sum(:runs)
+    else
+      total_runs ||= statistics.sum(:runs)
     end
-    @total_hits = total_hits.inject(:+)
   end
 
-  def total_doubles(array)
-    total_doubles = array.map do |attribute|
-      attribute.doubles
+  def total_hits(season = nil)
+    if season
+      total_hits ||= statistics.where(season_id: season).sum(:hits)
+    else
+      total_hits ||= statistics.sum(:hits)
     end
-    @total_doubles = total_doubles.inject(:+)
   end
 
-  def total_triples(array)
-    total_triples = array.map do |attribute|
-      attribute.triples
+  def total_doubles(season = nil)
+    if season
+      total_doubles ||= statistics.where(season_id: season).sum(:doubles)
+    else
+      total_doubles ||= statistics.sum(:doubles)
     end
-    @total_triples = total_triples.inject(:+)
   end
 
-  def total_homers(array)
-    total_homers = array.map do |attribute|
-      attribute.homers
+  def total_triples(season = nil)
+    if season
+      total_triples ||= statistics.where(season_id: season).sum(:triples)
+    else
+      total_triples ||= statistics.sum(:triples)
     end
-    @total_homers = total_homers.inject(:+)
   end
 
-  def total_rbis(array)
-    total_rbis = array.map do |attribute|
-      attribute.rbis
+  def total_homers(season = nil)
+    if season
+      total_homers ||= statistics.where(season_id: season).sum(:homers)
+    else
+      total_homers ||= statistics.sum(:homers)
     end
-    @total_rbis = total_rbis.inject(:+)
+
   end
 
-  def total_walks(array)
-    total_walks = array.map do |attribute|
-      attribute.walks
+  def total_rbis(season = nil)
+    if season
+      total_rbis ||= statistics.where(season_id: season).sum(:rbis)
+    else
+      total_rbis ||= statistics.sum(:rbis)
     end
-    @total_walks = total_walks.inject(:+)
   end
 
-  def total_strikeouts(array)
-    total_strikeouts = array.map do |attribute|
-      attribute.strikeouts
+  def total_walks(season = nil)
+    if season
+      total_walks ||= statistics.where(season_id: season).sum(:walks)
+    else
+      total_walks ||= statistics.sum(:walks)
     end
-    @total_strikeouts = total_strikeouts.inject(:+)
   end
 
-  def total_sac_fly(array)
-    total_sac_fly = array.map do |attribute|
-      attribute.sac_fly
+  def total_strikeouts(season = nil)
+    if season
+      total_strikeouts ||= statistics.where(season_id: season).sum(:strikeouts)
+    else
+      total_strikeouts ||= statistics.sum(:strikeouts)
     end
-    @total_sac_fly = total_sac_fly.inject(:+)
   end
 
-  def total_at_bats(plate_appearance, walks, sac_fly)
-    @total_at_bats = plate_appearance - (walks + sac_fly)
-  end
-
-  def season_batting_avg
-    string = (@total_hits.to_f / @total_at_bats.to_f).round(3)
-    sprintf('%.3f', string)
-  end
-
-  def total_bases
-    singles = @total_hits - (@total_doubles + @total_triples + @total_homers)
-    @total_bases = singles + (2 * @total_doubles) + (3 * @total_triples) + (4 * @total_homers)
-  end
-
-  def on_base_pct
-    @on_base_pct = ((@total_hits.to_f + @total_walks.to_f) / (@total_at_bats.to_f + @total_walks.to_f + @total_sac_fly.to_f)).round(3)
-    sprintf('%.3f', @on_base_pct)
-  end
-
-  def slugging_pct
-    @slugging_pct = (@total_bases.to_f / @total_at_bats.to_f).round(3)
-    sprintf('%.3f', @slugging_pct)
-  end
-
-  def on_base_plus_slg
-    @on_base_plus_slug = @slugging_pct + @on_base_pct
-    sprintf('%.3f', @on_base_plus_slug)
-  end
-
-  def season_plate_appearances(all_stats, all_seasons, player)
-    array = []
-    all_seasons.map do |season|
-      all_stats.map do |stat|
-         if stat.season_id == season.id && stat.player_id == player.id
-          array.push(stat.plate_appearance)
-        end
-      end
+  def total_sac_fly(season = nil)
+    if season
+      total_sac_fly ||= statistics.where(season_id: season).sum(:sac_fly)
+    else
+      total_sac_fly ||= statistics.sum(:sac_fly)
     end
-    @season_player_plate_appearances = array.inject(:+)
   end
 
-  def season_runs(all_stats, all_seasons, player)
-    array = []
-    all_seasons.map do |season|
-      all_stats.map do |stat|
-        if stat.season_id == season.id && stat.player_id == player.id
-          array.push(stat.runs)
-        end
-      end
+  def total_at_bats(season = nil)
+    if season
+      total_at_bats ||= statistics.where(season_id: season).sum(:plate_appearance) - (statistics.where(season_id: season).sum(:walks) + statistics.where(season_id: season).sum(:sac_fly))
+    else
+      total_at_bats ||= statistics.sum(:plate_appearance) - (statistics.sum(:walks) + statistics.sum(:sac_fly))
     end
-    @season_player_runs = array.inject(:+)
   end
 
+  def season_batting_avg(season = nil)
+    if season
+      string = (statistics.where(season_id: season).sum(:hits).to_f / (statistics.where(season_id: season).sum(:plate_appearance) - (statistics.where(season_id: season).sum(:walks) + statistics.where(season_id: season).sum(:sac_fly))).to_f).round(3)
+      sprintf('%.3f', string)
+    else
+      string = (total_hits.to_f / total_at_bats.to_f).round(3)
+      sprintf('%.3f', string)
+    end
+  end
+
+  def total_bases(season = nil)
+    if season
+      hits = statistics.where(season_id: season).sum(:hits)
+      doubles = statistics.where(season_id: season).sum(:doubles)
+      triples = statistics.where(season_id: season).sum(:triples)
+      homers = statistics.where(season_id: season).sum(:homers)
+      singles = (hits - (doubles + triples + homers))
+      @total_bases = singles + (2 * doubles) + (3 * triples) + (4 * homers)
+    else
+      hits = statistics.sum(:hits)
+      doubles = statistics.sum(:doubles)
+      triples = statistics.sum(:triples)
+      homers = statistics.sum(:homers)
+      singles = (hits - (doubles + triples + homers))
+      @total_bases = singles + (2 * doubles) + (3 * triples) + (4 * homers)
+    end
+  end
+
+  def on_base_pct(season = nil)
+    if season
+      season_hits = statistics.where(season_id: season).sum(:hits)
+      season_walks = statistics.where(season_id: season).sum(:walks)
+      season_sac_fly = statistics.where(season_id: season).sum(:sac_fly)
+      season_at_bats = statistics.where(season_id: season).sum(:plate_appearance) - (statistics.where(season_id: season).sum(:walks) + statistics.where(season_id: season).sum(:sac_fly))
+      @on_base_pct = ((season_hits.to_f + season_walks.to_f) / (season_at_bats.to_f + season_walks.to_f + season_sac_fly.to_f)).round(3)
+      sprintf('%.3f', @on_base_pct)
+    else
+      hits = statistics.sum(:hits)
+      walks = statistics.sum(:walks)
+      sac_fly = statistics.sum(:sac_fly)
+      at_bats = statistics.sum(:plate_appearance) - (statistics.sum(:walks) + statistics.sum(:sac_fly))
+      @on_base_pct = ((hits.to_f + walks.to_f) / (at_bats.to_f + walks.to_f + sac_fly.to_f)).round(3)
+      sprintf('%.3f', @on_base_pct)
+    end
+  end
+
+  def slugging_pct(season = nil)
+    if season
+      at_bats = statistics.where(season_id: season).sum(:plate_appearance) - (statistics.where(season_id: season).sum(:walks) + statistics.where(season_id: season).sum(:sac_fly))
+      @slugging_pct = (@total_bases.to_f / at_bats.to_f).round(3)
+      sprintf('%.3f', @slugging_pct)
+    else
+      at_bats = statistics.sum(:plate_appearance) - (statistics.sum(:walks) + statistics.sum(:sac_fly))
+      @slugging_pct = (@total_bases.to_f / at_bats.to_f).round(3)
+      sprintf('%.3f', @slugging_pct)
+    end
+  end
+
+   def on_base_plus_slg
+     @on_base_plus_slug = @slugging_pct + @on_base_pct
+     sprintf('%.3f', @on_base_plus_slug)
+   end
+   
 end
