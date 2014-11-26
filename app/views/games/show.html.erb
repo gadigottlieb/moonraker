@@ -1,7 +1,8 @@
+<%= link_to "Edit Game", edit_season_game_path(game: @game.id) %>
 <table>
   <thead>
     <tr>
-      <th><%= @game.form_date(@game.date) %></th>
+      <th><%= @game.format_date(@game.date) %></th>
       <th>1</th>
       <th>2</th>
       <th>3</th>
