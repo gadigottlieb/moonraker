@@ -7,7 +7,7 @@
       <td class="throws"><%= player.throws %></td>
       <td class="height"><%= player.height %>"</td>
       <td class="weight"><%= player.weight %>lbs</td>
-      <td class="birthday"><%= player.format_date(player.birthday) %></td>
+      <td class="birthday"><%= player.shorten_birthday(player.birthday) %></td>
     </tr>
   <% end %>
 <% end %>
