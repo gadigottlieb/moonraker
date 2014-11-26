@@ -15,7 +15,7 @@
 </div>
 <div id="player-info">
   <ul>
-    <li>Born: <strong><%= Date::MONTHNAMES[@player.birthday.month] %> <%= @player.birthday.day %>, <%= @player.birthday.year %></strong></li> |
+    <li>Born: <strong><%= @player.full_birthday(@player.birthday) %></strong></li> |
     <li>Bats/Throws: <strong><%= @player.bats %>/<%= @player.throws %></strong></li> |
     <li>Height: <strong><%= @player.height %>"</strong></li> |
     <li>Height: <strong><%= @player.weight %></strong></li>
@@ -49,7 +49,6 @@
       </tr>
     </thead>
     <tbody>
-      <%= render 'season_player_stats' %>
       <%= render 'total_player_stats' %>
     </tbody>
   </table>
