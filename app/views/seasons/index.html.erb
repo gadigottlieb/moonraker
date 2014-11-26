@@ -14,7 +14,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @seasons.each do |season| %>
+    <% @seasons.order(year: :asc).each do |season| %>
     <tr>
       <th><%= link_to season.year, season_path(season) %></th>
       <th><%= season.wins %></th>

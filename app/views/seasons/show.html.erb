@@ -1,16 +1,13 @@
 <% if can? :update, @season %>
   <%= link_to "Edit Season", edit_season_path(@season) %>
 <% end %>
-<h1><%= @season.year %></h1>
+<% if can? :create, @game %>
+  <%#= link_to "Add Game", new_season_game_path(season: @season.games.build) %>
+<% end %>
+<h1>Moonrakers Summer <%= @season.year %> Season</h1>
 <p>
-  The Moonrakers won <%= @season.wins %> games in the <%= @season.year %> season.
-  <% if @season.losses == 0 %>
-    They went undefeated and won their division with ease.
-  <% elsif @season.losses == 1 %>
-    They lost <%= @season.losses %> game but were still the champions.
-  <% end %>
+  <%= @season.description %>
 </p>
-
 <table border="2">
   <thead>
     <tr>
@@ -23,8 +20,8 @@
   <tbody>
     <% @games.each do |game| %>
     <tr>
-        <th><%= Date::MONTHNAMES[game.date.month] %> <%= game.date.day %>, <%= game.date.year %></th>
-        <th><%= link_to game.opponent, game_path(game) %></th>
+        <th><%= game.format_date(game.date)%></th>
+        <th><%= link_to game.opponent, season_game_path(season_id: game.season_id, game: game.id) %></th>
         <th><%= game.home_score %></th>
         <th><%= game.opponent_score %></th>
       <% end %>
