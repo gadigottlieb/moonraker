@@ -19,25 +19,53 @@ twenty_fourteen = Season.create({
   wins: 6,
   losses: 0,
   runs_scored: 97,
-  runs_allowed: 27
+  runs_allowed: 27,
+  description: "After their first Championship season in years, the Moonrakers
+  fought to repeat. The started off very hot, easily winning their first two
+  games before Shalom Motechin went down with an injury. The team bounced back
+  adding former player, Dovi Favish to fill the gap as pitcher. By the fourth
+  game, Shalom would return and both players went on to pitch. The team overcame
+  adversity and was the most productive offensive team in the league. The team
+  had a plus 70 run differential, having scored 97 runs in just 6 games and only
+  giving up 27 runs. 6 players were in the double digits for RBIs. MVP for the
+  team was David Gottlieb, who had a team high of six homeruns and batted .700.
+  The Moonrakers went on to go undefeated and win their second Division
+  Championship in two years."
   })
-
 twenty_thirteen = Season.create({
   year: 2013,
   wins: 5,
   losses: 1,
   runs_scored: 70,
   runs_allowed: 34,
+  description: "The start of the 2013 for the Moonrakers meant one thing,
+  redemption. Having lost a deciding final game for the Division Championship,
+  the team was focused on gaining the crown. With excellent leadership from
+  Captain Rapfogel, the team was highly motivated and won all their games but
+  one. The Moonrakers played six games and played the Garden View Mountain Lions
+  twice and ended up splitting those games. Heading toward the final game of the
+  season, the Moonrakers held a game lead over the Garden View Mountain Lions.
+  The league scheduled a deciding Division Championship Game between the two
+  teams on the final week of the season. However, the Garden View Mountain Lions
+  were unable to field a team so the Moonrakers took their first Division
+  Championship in over a decade."
   })
-
 twenty_twelve = Season.create({
   year: 2012,
   wins: 5,
   losses: 3,
   runs_scored: 69,
   runs_allowed: 37,
+  description: "In the 2012 season, the Moonrakers gained new leadership with
+  Captain Moshe Rapfogel. After a dark period of constant years of losing,
+  the Moonrakers bounced back with their first winning season in years. They
+  acquired pitching phenom Shalom Motechin who was able to post the least runs
+  allowed by a Moonraker pitcher in over a decade.
+  The Moonrakers ended up going to a deciding final game against the
+  Old Laners for the Division Championship. Unfortunately, the Moonrakers
+  did not prevail and lost the final game but the season was not a complete loss.
+  The team improved vastly into the future seasons."
   })
-
 dovi = Player.create({
   first_name: "Dovi",
   last_name: "Faivish",
@@ -56,7 +84,6 @@ dovi = Player.create({
   weight: 180,
   birthday: "25-2-1978"
   })
-
 gellis = Player.create({
   first_name: "Jonathan",
   last_name: "Gellis",
@@ -75,7 +102,6 @@ gellis = Player.create({
   weight: 185,
   birthday: "28-12-1971"
   })
-
 leib = Player.create({
   first_name: "Leib",
   last_name: "Gershkovich",
@@ -91,7 +117,6 @@ leib = Player.create({
   weight: 190,
   birthday: "31-3-1973"
   })
-
 shai = Player.create({
   first_name: "Shai",
   last_name: "Gerson",
@@ -109,7 +134,6 @@ shai = Player.create({
   weight: 190,
   birthday: "1-1-1900"
   })
-
 jbomb = Player.create({
   first_name: "Jeremy",
   last_name: "Goldzal",
@@ -128,7 +152,6 @@ jbomb = Player.create({
   weight: 200,
   birthday: "1-1-1982"
   })
-
 david = Player.create({
   first_name: "David",
   last_name: "Gottlieb",
@@ -148,7 +171,6 @@ david = Player.create({
   weight: 205,
   birthday: "10-10-1981"
   })
-
 gadi = Player.create({
   first_name: "Gadi",
   last_name: "Gottlieb",
@@ -164,7 +186,6 @@ gadi = Player.create({
   weight: 160,
   birthday: "16-5-1990"
   })
-
 heshy = Player.create({
   first_name: "Heshy",
   last_name: "Gottlieb",
@@ -180,7 +201,6 @@ heshy = Player.create({
   weight: 195,
   birthday: "4-1-1949"
   })
-
 josh = Player.create({
   first_name: "Josh",
   last_name: "Gottlieb",
@@ -196,7 +216,6 @@ josh = Player.create({
   weight: 220,
   birthday: "8-9-1983"
   })
-
 mordechai = Player.create({
   first_name: "Mordechai",
   last_name: "Gottlieb",
@@ -212,7 +231,6 @@ mordechai = Player.create({
   weight: 210,
   birthday: "22-3-1980"
   })
-
 roni = Player.create({
   first_name: "Roni",
   last_name: "Gottlieb",
@@ -228,7 +246,6 @@ roni = Player.create({
   weight: 140,
   birthday: "19-8-1996"
   })
-
 isaacs = Player.create({
   first_name: "Yosef",
   last_name: "Isaacs",
@@ -244,7 +261,6 @@ isaacs = Player.create({
   weight: 190,
   birthday: "1-1-1900"
   })
-
 shalom = Player.create({
   first_name: "Shalom",
   last_name: "Motechin",
@@ -260,7 +276,6 @@ shalom = Player.create({
   weight: 180,
   birthday: "19-7-1971"
   })
-
 moshe = Player.create({
   first_name: "Moshe",
   last_name: "Rapfogel",
@@ -276,7 +291,6 @@ moshe = Player.create({
   weight: 195,
   birthday: "11-5-1991"
   })
-
 willie = Player.create({
   first_name: "Willie",
   last_name: "Rapfogel",
@@ -292,7 +306,6 @@ willie = Player.create({
   weight: 200,
   birthday: "11-5-1991"
   })
-
 yaakov = Player.create({
   first_name: "Yaakov",
   last_name: "Rosenberg",
@@ -308,7 +321,6 @@ yaakov = Player.create({
   weight: 185,
   birthday: "5-9-1981"
   })
-
 kenny = Player.create({
   first_name: "Kenny",
   last_name: "Schiff",
@@ -537,7 +549,7 @@ game_twelve_h = Game.create({
 #Season Roster #
 ##############
 twenty_fourteen.players.push(dovi, gellis, leib, shai, jbomb, david, gadi, heshy, josh, mordechai, roni, isaacs, shalom, moshe, yaakov, kenny)
-twenty_thirteen.players.push(gellis, leib, shai, jbomb, david, gadi, heshy, josh, mordechai, roni, isaacs, shalom, moshe, willie, yaakov, kenny)
+twenty_thirteen.players.push(gellis, leib, shai, jbomb, david, gadi, roni, isaacs, shalom, moshe, willie, yaakov, kenny)
 twenty_twelve.players.push(gellis, leib, jbomb, david, gadi, roni, isaacs, shalom, moshe, willie, kenny)
 
 ######################
@@ -2799,3 +2811,194 @@ shalom_game_five_twnty_thirteen = Statistic.create({
     season_id: twenty_thirteen.id
   })
 game_thirteen_f.players.push(roni, gellis, gadi, david, moshe, willie, jbomb, isaacs, leib, shalom)
+###############
+# 2012 STATS  #
+###############
+
+gadi_12 = Statistic.create({
+  played: true,
+  plate_appearance: 26,
+  runs: 8,
+  hits: 13,
+  doubles: 4,
+  triples: 2,
+  homers: 3,
+  rbis: 11,
+  walks: 1,
+  hit_by_pitch: 0,
+  strikeouts: 1,
+  sac_fly: 1,
+  player_id: gadi.id,
+  game_id: nil,
+  season_id: twenty_twelve.id
+  })
+david_12 = Statistic.create({
+  played: true,
+  plate_appearance: 27,
+  runs: 9,
+  hits: 13,
+  doubles: 4,
+  triples: 0,
+  homers: 5,
+  rbis: 11,
+  walks: 1,
+  hit_by_pitch: 0,
+  strikeouts: 0,
+  sac_fly: 0,
+  player_id: david.id,
+  game_id: nil,
+  season_id: twenty_twelve.id
+  })
+willie_12 = Statistic.create({
+  played: true,
+  plate_appearance: 25,
+  runs: 2,
+  hits: 12,
+  doubles: 3,
+  triples: 0,
+  homers: 0,
+  rbis: 2,
+  walks: 0,
+  hit_by_pitch: 0,
+  strikeouts: 0,
+  sac_fly: 1,
+  player_id: willie.id,
+  game_id: nil,
+  season_id: twenty_twelve.id
+  })
+shalom_12 = Statistic.create({
+  played: true,
+  plate_appearance: 21,
+  runs: 2,
+  hits: 9,
+  doubles: 2,
+  triples: 1,
+  homers: 0,
+  rbis: 3,
+  walks: 0,
+  hit_by_pitch: 0,
+  strikeouts: 0,
+  sac_fly: 0,
+  player_id: shalom.id,
+  game_id: nil,
+  season_id: twenty_twelve.id
+  })
+moshe_12 = Statistic.create({
+  played: true,
+  plate_appearance: 21,
+  runs: 4,
+  hits: 8,
+  doubles: 3,
+  triples: 0,
+  homers: 2,
+  rbis: 8,
+  walks: 2,
+  hit_by_pitch: 0,
+  strikeouts: 1,
+  sac_fly: 0,
+  player_id: moshe.id,
+  game_id: nil,
+  season_id: twenty_twelve.id
+  })
+kenny_12 = Statistic.create({
+  played: true,
+  plate_appearance: 30,
+  runs: 3,
+  hits: 9,
+  doubles: 1,
+  triples: 1,
+  homers: 0,
+  rbis: 5,
+  walks: 4,
+  hit_by_pitch: 0,
+  strikeouts: 0,
+  sac_fly: 3,
+  player_id: kenny.id,
+  game_id: nil,
+  season_id: twenty_twelve.id
+  })
+jbomb_12 = Statistic.create({
+  played: true,
+  plate_appearance: 19,
+  runs: 4,
+  hits: 6,
+  doubles: 0,
+  triples: 0,
+  homers: 1,
+  rbis: 3,
+  walks: 1,
+  hit_by_pitch: 0,
+  strikeouts: 0,
+  sac_fly: 0,
+  player_id: jbomb.id,
+  game_id: nil,
+  season_id: twenty_twelve.id
+  })
+isaacs_12 = Statistic.create({
+  played: true,
+  plate_appearance: 15,
+  runs: 0,
+  hits: 5,
+  doubles: 0,
+  triples: 0,
+  homers: 0,
+  rbis: 0,
+  walks: 0,
+  hit_by_pitch: 0,
+  strikeouts: 0,
+  sac_fly: 0,
+  player_id: isaacs.id,
+  game_id: nil,
+  season_id: twenty_twelve.id
+  })
+gellis_12 = Statistic.create({
+  played: true,
+  plate_appearance: 19,
+  runs: 5,
+  hits: 6,
+  doubles: 4,
+  triples: 0,
+  homers: 0,
+  rbis: 3,
+  walks: 0,
+  hit_by_pitch: 0,
+  strikeouts: 0,
+  sac_fly: 0,
+  player_id: gellis.id,
+  game_id: nil,
+  season_id: twenty_twelve.id
+  })
+roni_12 = Statistic.create({
+  played: true,
+  plate_appearance: 20,
+  runs: 1,
+  hits: 6,
+  doubles: 1,
+  triples: 0,
+  homers: 0,
+  rbis: 1,
+  walks: 1,
+  hit_by_pitch: 0,
+  strikeouts: 0,
+  sac_fly: 0,
+  player_id: roni.id,
+  game_id: nil,
+  season_id: twenty_twelve.id
+  })
+leib_12 = Statistic.create({
+  played: true,
+  plate_appearance: 18,
+  runs: 2,
+  hits: 5,
+  doubles: 1,
+  triples: 0,
+  homers: 1,
+  rbis: 3,
+  walks: 2,
+  hit_by_pitch: 0,
+  strikeouts: 0,
+  sac_fly: 0,
+  player_id: leib.id,
+  game_id: nil,
+  season_id: twenty_twelve.id
+  })
