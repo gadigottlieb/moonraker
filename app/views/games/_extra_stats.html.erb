@@ -1,0 +1,31 @@
+<div id="extra-stats">
+  <b>BATTING</b><br>
+<% if @game.game_doubles(@game.id) == [] %>
+<% else %>
+  <b>2B:</b>
+  <% @game.game_doubles(@game.id).each do |player| %>
+    <%= player %>
+  <% end %>
+<% end %>
+<% if @game.game_triples(@game.id) == [] %>
+<% else %>
+  <br><b>3B:</b>
+  <% @game.game_triples(@game.id).each do |player| %>
+    <%= player %>
+  <% end %>
+<% end %>
+<% if @game.game_homers(@game.id) == [] %>
+<% else %>
+  <br><b>HR:</b>
+  <% @game.game_homers(@game.id).each do |player| %>
+    <%= player %>
+  <% end %>
+<% end %>
+<% if @game.game_sac_fly(@game.id) == [] %>
+<% else %>
+  <br><b>SF:</b>
+  <% @game.game_sac_fly(@game.id).each do |player| %>
+    <%= player %>
+  <% end %>
+<% end %>
+</div>

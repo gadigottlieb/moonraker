@@ -1,51 +1,55 @@
-<%= link_to "Edit Game", edit_season_game_path(game: @game.id) %>
-<table>
-  <thead>
-    <tr>
-      <th><%= @game.format_date(@game.date) %></th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-      <th>R</th>
-      <th>H</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="opponent">
-      <th><%= @game.opponent %></th>
-      <td><%= @game.opponent_first_inning  %></td>
-      <td><%= @game.opponent_second_inning  %></td>
-      <td><%= @game.opponent_third_inning  %></td>
-      <td><%= @game.opponent_fourth_inning  %></td>
-      <td><%= @game.opponent_fifth_inning  %></td>
-      <td><%= @game.opponent_sixth_inning  %></td>
-      <td><%= @game.opponent_seventh_inning  %></td>
-      <td><%= @game.opponent_eigth_inning  %></td>
-      <td><%= @game.opponent_ninth_inning  %></td>
-      <td><strong><%= @game.opponent_score %></strong></td>
-      <td><strong><%= @game.opponent_score %></strong></td>
-    </tr>
-    <tr class="moonrakers">
-      <th>Moonrakers</th>
-      <td><%= @game.home_first_inning  %></td>
-      <td><%= @game.home_second_inning  %></td>
-      <td><%= @game.home_third_inning  %></td>
-      <td><%= @game.home_fourth_inning  %></td>
-      <td><%= @game.home_fifth_inning  %></td>
-      <td><%= @game.home_sixth_inning  %></td>
-      <td><%= @game.home_seventh_inning  %></td>
-      <td><%= @game.home_eigth_inning  %></td>
-      <td><%= @game.home_ninth_inning  %></td>
-      <td><strong><%= @game.home_score %></strong></td>
-      <td><strong><%= @game.team_hits(@game) %></strong></td>
-    </tr>
-  </tbody>
-</table>
+<div id="content">
+  <% if can? :update, @game %>
+    <%= link_to "Edit Game", edit_season_game_path(game: @game.id) %>
+  <% end %>
+  <table>
+    <thead>
+      <tr>
+        <th><%= @game.format_date(@game.date) %></th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>R</th>
+        <th>H</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="opponent">
+        <th><%= @game.opponent %></th>
+        <td><%= @game.opponent_first_inning  %></td>
+        <td><%= @game.opponent_second_inning  %></td>
+        <td><%= @game.opponent_third_inning  %></td>
+        <td><%= @game.opponent_fourth_inning  %></td>
+        <td><%= @game.opponent_fifth_inning  %></td>
+        <td><%= @game.opponent_sixth_inning  %></td>
+        <td><%= @game.opponent_seventh_inning  %></td>
+        <td><%= @game.opponent_eigth_inning  %></td>
+        <td><%= @game.opponent_ninth_inning  %></td>
+        <td><strong><%= @game.opponent_score %></strong></td>
+        <td><strong><%= @game.opponent_score %></strong></td>
+      </tr>
+      <tr class="moonrakers">
+        <th>Moonrakers</th>
+        <td><%= @game.home_first_inning  %></td>
+        <td><%= @game.home_second_inning  %></td>
+        <td><%= @game.home_third_inning  %></td>
+        <td><%= @game.home_fourth_inning  %></td>
+        <td><%= @game.home_fifth_inning  %></td>
+        <td><%= @game.home_sixth_inning  %></td>
+        <td><%= @game.home_seventh_inning  %></td>
+        <td><%= @game.home_eigth_inning  %></td>
+        <td><%= @game.home_ninth_inning  %></td>
+        <td><strong><%= @game.home_score %></strong></td>
+        <td><strong><%= @game.team_hits(@game) %></strong></td>
+      </tr>
+    </tbody>
+  </table>
 
-<%= render 'games/player_stats' %>
+  <%= render 'games/game_stats' %>
+</div>

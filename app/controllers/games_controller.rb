@@ -1,7 +1,6 @@
 class GamesController < ApplicationController
 
   def show
-    @season = Season.find(params[:id])
     @game = Game.find(params[:id])
     @players = @game.players
     @players.each do |player|

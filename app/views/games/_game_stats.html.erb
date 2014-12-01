@@ -1,0 +1,43 @@
+<table border="2">
+  <thead>
+    <tr>
+      <th>Moonrakers</th>
+      <th>AB</th>
+      <th>R</th>
+      <th>H</th>
+      <th>RBI</th>
+      <th>BB</th>
+      <th>SO</th>
+      <th>AVG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @game.statistics.each do |stat| %>
+      <% if stat.game_id == @game.id %>
+        <tr>
+          <td><%= link_to(stat.player_name(stat.player_id), player_path(Player.find(stat.player_id)))  %> </td>
+          <td><%= stat.at_bats(stat) %></td>
+          <td><%= stat.runs %></td>
+          <td><%= stat.hits %></td>
+          <td><%= stat.rbis %></td>
+          <td><%= stat.walks %></td>
+          <td><%= stat.strikeouts %></td>
+          <td><%= stat.batting_avg(stat.hits) %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+  <thead>
+    <tr>
+      <th>Totals</th>
+      <th><%= @game.team_at_bats(@game) %></th>
+      <th><%= @game.team_runs(@game) %></th>
+      <th><%= @game.team_hits(@game) %></th>
+      <th><%= @game.team_rbis(@game) %></th>
+      <th><%= @game.team_walks(@game) %></th>
+      <th><%= @game.team_strikeouts(@game) %></th>
+      <th><%= @game.batting_avg %></th>
+    </tr>
+  </thead>
+</table>
+<%= render "extra_stats" %>
