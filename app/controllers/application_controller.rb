@@ -11,15 +11,4 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :name
     devise_parameter_sanitizer.for(:account_update) << :name
   end
-
-  def index
-    render layout: 'application', text: ''
-    @players = Player.all
-    @seasons = Season.all
-  end
-  def team_info
-    @players = Player.all
-    @seasons = Season.all
-  end
-
 end
