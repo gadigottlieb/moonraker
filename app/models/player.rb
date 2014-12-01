@@ -187,5 +187,5 @@ class Player < ActiveRecord::Base
      @on_base_plus_slug = @slugging_pct + @on_base_pct
      sprintf('%.3f', @on_base_plus_slug)
    end
-   
+
 end

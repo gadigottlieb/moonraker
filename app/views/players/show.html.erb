@@ -1,55 +1,41 @@
-<% if can? :update, @player %>
-  <%= link_to "Edit Player", edit_player_path(@player) %>
-<% end %>
-<div id="main-image">
-  <div id="photo">
-    <%= image_tag(@player.photo) %>
-    <div id="main-name">
-      <h1 id="player-name">
-        <%= @player.first_name + " " + @player.last_name %>
-        <span id="player-number"><%= @player.number %> |</span>
-        <span id="player-position"><%= @player.primary_position %></span>
-      </h1>
+<div class="scrolls">
+  <div id="content">
+    <% if can? :update, @player %>
+      <%= link_to "Edit Player", edit_player_path(@player) %>
+    <% end %>
+    <div id="player-card">
+      <div id="photo">
+        <%= image_tag(@player.photo) %>
+      </div>
+      <div id="main-name">
+        <h1 id="player-name">
+          <%= @player.first_name + " " + @player.last_name %>
+          <span id="player-number"><%= @player.number %> |</span>
+          <span id="player-position"><%= @player.primary_position %></span>
+        </h1>
+      </div>
+      <div id="player-info">
+        <p>
+          <strong>Born:</strong> <%= @player.full_birthday(@player.birthday) %><br>
+          <strong>Bats/Throws:</strong> <%= @player.bats %>/<%= @player.throws %><br>
+          <strong>Height:</strong> <%= @player.height %>"
+          <strong>Weight:</strong> <%= @player.weight %>
+        </p>
+      </div>
     </div>
+    <% if @player.statistics == [] %>
+      <%= "" %>
+    <% else %>
+
+    <div id="player-stats">
+      <div class="head">
+        <td><%= @player.name %> Career Stats</td>
+      </div>
+      <table border="2">
+        <%= render 'seasons/season_stats_header' %>
+        <%= render 'total_player_stats' %>
+      </table>
+    </div>
+    <% end %>
   </div>
 </div>
-<div id="player-info">
-  <ul>
-    <li>Born: <strong><%= @player.full_birthday(@player.birthday) %></strong></li> |
-    <li>Bats/Throws: <strong><%= @player.bats %>/<%= @player.throws %></strong></li> |
-    <li>Height: <strong><%= @player.height %>"</strong></li> |
-    <li>Height: <strong><%= @player.weight %></strong></li>
-  </ul>
-</div>
-<% if @player.statistics == [] %>
-  <%= "" %>
-<% else %>
-  <table border="2">
-    <caption>Regular Season Career Stats</caption>
-    <thead>
-      <tr>
-        <td>Year</td>
-        <td>G</td>
-        <td>PA</td>
-        <td>AB</td>
-        <td>R</td>
-        <td>H</td>
-        <td>2B</td>
-        <td>3B</td>
-        <td>HR</td>
-        <td>RBI</td>
-        <td>BB</td>
-        <td>SO</td>
-        <td>SF</td>
-        <td>TB</td>
-        <td>AVG</td>
-        <td>OBP</td>
-        <td>SLG</td>
-        <td>OPS</td>
-      </tr>
-    </thead>
-    <tbody>
-      <%= render 'total_player_stats' %>
-    </tbody>
-  </table>
-<% end %>
