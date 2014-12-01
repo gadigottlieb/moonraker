@@ -18,7 +18,7 @@ twenty_fourteen = Season.create({
   year: 2014,
   wins: 6,
   losses: 0,
-  runs_scored: 97,
+  runs_scored: 98,
   runs_allowed: 27,
   description: "After their first Championship season in years, the Moonrakers
   fought to repeat. The started off very hot, easily winning their first two
@@ -26,7 +26,7 @@ twenty_fourteen = Season.create({
   adding former player, Dovi Favish to fill the gap as pitcher. By the fourth
   game, Shalom would return and both players went on to pitch. The team overcame
   adversity and was the most productive offensive team in the league. The team
-  had a plus 70 run differential, having scored 97 runs in just 6 games and only
+  had a plus 71 run differential, having scored 98 runs in just 6 games and only
   giving up 27 runs. 6 players were in the double digits for RBIs. MVP for the
   team was David Gottlieb, who had a team high of six homeruns and batted .700.
   The Moonrakers went on to go undefeated and win their second Division
@@ -75,7 +75,7 @@ dovi = Player.create({
   position_description: "Pitchers",
   bats: "R",
   throws: "R",
-  photo: "gadigottlieb.JPG",
+  photo: "dovi.jpg",
   description: "Dovi has been plagued with ankle injuries for the last few years.
   He made his return to the Moonrakers in the summer of 2014 where he helped
   fill in as the starting pitcher. Dovi's unique batting swing springs fear in
@@ -93,7 +93,7 @@ gellis = Player.create({
   position_description: "Outfielders",
   bats: "R",
   throws: "R",
-  photo: "gadigottlieb.JPG",
+  photo: "gellis.jpg",
   description: "Jon's leadership on the field has helped the Moonrakers win many
   close games. When an umpire blows a call, Jon will be the first one to express
   the teams views in calm manner. Jon had some big hits for the Moonrakers and
@@ -111,7 +111,7 @@ leib = Player.create({
   position_description: "Outfielders",
   bats: "R",
   throws: "R",
-  photo: "gadigottlieb.JPG",
+  photo: "leib.jpg",
   description: "",
   height: "6'0",
   weight: 190,
@@ -126,7 +126,7 @@ shai = Player.create({
   position_description: "Infielders",
   bats: "R",
   throws: "R",
-  photo: "gadigottlieb.JPG",
+  photo: "shai.jpg",
   description: "Shai's ability to play the hot corner helped the Moonrakers
   tremendously. His ability to hit to opposite field drove in many runs. If only
   he can give the Moonrakers full commitment, they'll be better than ever!",
@@ -143,13 +143,13 @@ jbomb = Player.create({
   position_description: "Catchers",
   bats: "R",
   throws: "R",
-  photo: "gadigottlieb.JPG",
+  photo: "jbomb.jpg",
   description: "When you think of Jeremy, aka JBOMB, you think Crazy. His golf
   swing is good one homerun every summer. His ability to run the bases is
   unmatched by anyone. His willing to slide head or feet first makes him such a
   great player.",
   height: "5'6",
-  weight: 200,
+  weight: 204,
   birthday: "1-1-1982"
   })
 david = Player.create({
@@ -161,7 +161,7 @@ david = Player.create({
   position_description: "Infielders",
   bats: "R",
   throws: "R",
-  photo: "gadigottlieb.JPG",
+  photo: "david.jpg",
   description: "Moonshots. That's what happens when pitchers pitch to David. His
   raw power and bat speed has established David as the cleanup hitter for the
   Moonrakers. Over the years, David has lead the Moonrakers in Homeruns. Now if
@@ -240,7 +240,7 @@ roni = Player.create({
   position_description: "Outfielders",
   bats: "R",
   throws: "R",
-  photo: "gadigottlieb.JPG",
+  photo: "roni.jpg",
   description: "",
   height: "5'10",
   weight: 140,
@@ -255,7 +255,7 @@ isaacs = Player.create({
   position_description: "Infielders",
   bats: "R",
   throws: "R",
-  photo: "gadigottlieb.JPG",
+  photo: "isaacs.jpg",
   description: "Infielders",
   height: "5'11",
   weight: 190,
@@ -270,7 +270,7 @@ shalom = Player.create({
   position_description: "Pitchers",
   bats: "R",
   throws: "R",
-  photo: "gadigottlieb.JPG",
+  photo: "shalom.jpg",
   description: "Pitchers",
   height: "5'8",
   weight: 180,
@@ -285,7 +285,7 @@ moshe = Player.create({
   position_description: "Infielders",
   bats: "R",
   throws: "R",
-  photo: "gadigottlieb.JPG",
+  photo: "moshe.jpg",
   description: "",
   height: "5'8",
   weight: 195,
@@ -300,7 +300,7 @@ willie = Player.create({
   position_description: "Infielders",
   bats: "R",
   throws: "R",
-  photo: "gadigottlieb.JPG",
+  photo: "gadigottieb.JPG",
   description: "",
   height: "5'8",
   weight: 200,
@@ -330,7 +330,7 @@ kenny = Player.create({
   position_description: "Infielders",
   bats: "R",
   throws: "R",
-  photo: "gadigottlieb.JPG",
+  photo: "kenny.jpg",
   description: "",
   height: "5'9",
   weight: 165,
@@ -548,7 +548,7 @@ game_twelve_h = Game.create({
 ##############
 #Season Roster #
 ##############
-twenty_fourteen.players.push(dovi, gellis, leib, shai, jbomb, david, gadi, heshy, josh, mordechai, roni, isaacs, shalom, moshe, yaakov, kenny)
+twenty_fourteen.players.push(dovi, gellis, leib, shai, jbomb, david, gadi, josh, roni, isaacs, shalom, moshe, yaakov, kenny)
 twenty_thirteen.players.push(gellis, leib, shai, jbomb, david, gadi, roni, isaacs, shalom, moshe, willie, yaakov, kenny)
 twenty_twelve.players.push(gellis, leib, jbomb, david, gadi, roni, isaacs, shalom, moshe, willie, kenny)
 
@@ -574,8 +574,8 @@ kenny_game_one = Statistic.create({
   })
 gellis_game_one = Statistic.create({
     played: true,
-    plate_appearance: 3,
-    runs: 1,
+    plate_appearance: 4,
+    runs: 2,
     hits: 2,
     doubles: 1,
     triples: 0,
@@ -608,8 +608,8 @@ gadi_game_one = Statistic.create({
   })
 david_game_one = Statistic.create({
     played: true,
-    plate_appearance: 3,
-    runs: 1,
+    plate_appearance: 4,
+    runs: 2,
     hits: 2,
     doubles: 1,
     triples: 0,
@@ -710,7 +710,7 @@ leib_game_one = Statistic.create({
   })
 isaacs_game_one = Statistic.create({
     played: true,
-    plate_appearance: 3,
+    plate_appearance: 4,
     runs: 0,
     hits: 0,
     doubles: 0,
@@ -749,7 +749,7 @@ game_1.players.push(kenny, gellis, gadi, david, moshe, shai, roni, jbomb, leib, 
 #####################
 kenny_game_two = Statistic.create({
     played: true,
-    plate_appearance: 5,
+    plate_appearance: 7,
     runs: 4,
     hits: 3,
     doubles: 2,
@@ -766,7 +766,7 @@ kenny_game_two = Statistic.create({
   })
 gellis_game_two = Statistic.create({
     played: true,
-    plate_appearance: 6,
+    plate_appearance: 7,
     runs: 4,
     hits: 5,
     doubles: 1,
@@ -783,7 +783,7 @@ gellis_game_two = Statistic.create({
   })
 gadi_game_two = Statistic.create({
     played: true,
-    plate_appearance: 5,
+    plate_appearance: 6,
     runs: 4,
     hits: 4,
     doubles: 1,
@@ -800,14 +800,14 @@ gadi_game_two = Statistic.create({
   })
 david_game_two = Statistic.create({
     played: true,
-    plate_appearance: 5,
+    plate_appearance: 6,
     runs: 4,
     hits: 3,
     doubles: 1,
     triples: 0,
     homers: 2,
     rbis: 3,
-    walks: 0,
+    walks: 1,
     hit_by_pitch: 0,
     strikeouts: 0,
     sac_fly: 0,
@@ -817,7 +817,7 @@ david_game_two = Statistic.create({
   })
 moshe_game_two = Statistic.create({
     played: true,
-    plate_appearance: 5,
+    plate_appearance: 6,
     runs: 1,
     hits: 3,
     doubles: 0,
@@ -1345,7 +1345,7 @@ josh_game_five = Statistic.create({
     doubles: 0,
     triples: 1,
     homers: 0,
-    rbis: 1,
+    rbis: 2,
     walks: 0,
     hit_by_pitch: 0,
     strikeouts: 0,
@@ -1385,6 +1385,23 @@ gellis_game_five = Statistic.create({
     strikeouts: 0,
     sac_fly: 0,
     player_id: gellis.id,
+    game_id: game_5.id,
+    season_id: twenty_fourteen.id
+  })
+shai_game_five = Statistic.create({
+    played: true,
+    plate_appearance: 4,
+    runs: 0,
+    hits: 1,
+    doubles: 0,
+    triples: 0,
+    homers: 0,
+    rbis: 1,
+    walks: 0,
+    hit_by_pitch: 0,
+    strikeouts: 0,
+    sac_fly: 1,
+    player_id: shai.id,
     game_id: game_5.id,
     season_id: twenty_fourteen.id
   })
@@ -1947,12 +1964,12 @@ david_game_two_twnty_thirteen = Statistic.create({
 moshe_game_two_twnty_thirteen = Statistic.create({
     played: true,
     plate_appearance: 4,
-    runs: 1,
+    runs: 0,
     hits: 1,
     doubles: 0,
     triples: 0,
     homers: 1,
-    rbis: 2,
+    rbis: 0,
     walks: 0,
     hit_by_pitch: 0,
     strikeouts: 0,
@@ -2055,7 +2072,7 @@ shalom_game_two_twnty_thirteen = Statistic.create({
     triples: 0,
     homers: 0,
     rbis: 0,
-    walks: 1,
+    walks: 0,
     hit_by_pitch: 0,
     strikeouts: 0,
     sac_fly: 1,
