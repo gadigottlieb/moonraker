@@ -1,14 +1,24 @@
-$blue: #110476;
-
+$blue: #3730fb;
 $orange: #e27d0f;
-// #main-image{
-#photo{
-  img{
-    margin-top: 15px;
-    height: 350px;
-    width: 700px;
-    border: 5px solid $orange;
-    z-index: -1;
+$grey: #a2a2a2;
+$lightWhite: rgba(0, 0, 0, 0.1);
+#player-card{
+  text-align: center;
+  display: block;
+  div{
+    display: inline-block;
+  }
+  #photo{
+    margin-left: 20px;
+    img{
+      float:left;
+      margin-top: 15px;
+      height: 200px;
+      width: 150px;
+      border: 3px solid $lightWhite;
+      border-radius: 5px;
+      z-index: -1;
+    }
   }
   #main-name{
     background: -webkit-linear-gradient(bottom, rgba(4, 3, 65, 0.45), $blue);
@@ -16,27 +26,64 @@ $orange: #e27d0f;
     height: 50px;
     width: 225px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right:auto;
     border: solid 1px rgba(63, 63, 63, 0.72);
     background-color: rgba(120, 111, 111, 0.91);
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
     #player-name{
       margin-top: 15px;
       font-size: 18px;
     }
   }
-}
 
-#player-info{
-  // border: solid 2px $orange;
-  // height: 100px;
-  // width: 200px;
-  ul{
-    list-style: none;
-    li {
-      display: inline-block;
+  #player-info{
+    height: auto;
+    width: auto;
+    margin-left: 5px;
+    p  {
+      // margin-top: 100px;
     }
   }
-
 }
+#player-stats, #season-stats{
+  text-align: center;
+  font-weight: bold;
+  color: $blue;
+    td {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  table {
+    border: 1px solid black;
+    width: 600px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    margin-left: auto;
+    margin-right: auto;
+    // position: absolute;
+  }
+  thead {
+    tr{
+      background-color: $grey;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+  tbody{
+    tr{
+      td {
+        display: table-cell;
+        vertical-align: auto;
+      }
+      // font-weight: bold;
+      text-align: center;
+    }
+    .last{
+      background-color: $grey;
+      color: $blue;
+    }
+  }

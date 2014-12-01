@@ -1,0 +1,17 @@
+$blue: #3730fb;
+.title{
+  font-family: 'Seaweed Script', cursive;
+  text-shadow:     3px 3px 0 #000,
+                  -1px -1px 0 #000,
+                   1px -1px 0 #000,
+                  -1px 1px 0 #000,
+                   1px 1px 0 #000;
+  text-align: center;
+  font-size: 40px;
+  color: $blue;
+}
+.roster{
+  margin-bottom: 15px;
+  // height: 50%;
+  // width: 50%;
+}
