@@ -1,0 +1,22 @@
+<thead>
+  <tr>
+    <td>Totals</td>
+    <td><%= @games.count %></td>
+    <td><%= @plate_appearances %></td>
+    <td><%= @at_bats %></td>
+    <td><%= @runs %></td>
+    <td><%= @hits %></td>
+    <td><%= @doubles %></td>
+    <td><%= @triples %></td>
+    <td><%= @homers %></td>
+    <td><%= @rbis %></td>
+    <td><%= @statistics.sum(:walks) %></td>
+    <td><%= @statistics.sum(:strikeouts) %></td>
+    <td><%= @statistics.sum(:sac_fly) %></td>
+    <td><%= @total_bases %></td>
+    <td><%= @batting_avg %></td>
+    <td><%= @on_base_pct %></td>
+    <td><%= @slugging_pct %></td>
+    <td><%= @on_base_plus_slg %></td>
+  </tr>
+</thead>

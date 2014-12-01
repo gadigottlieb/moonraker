@@ -1,0 +1,74 @@
+<div id="player-stats">
+  <div id="header">
+    <td><%= @season.year %> Season Stats</td>
+  </div>
+  <table border="2">
+    <thead>
+      <td>Name</td>
+      <td>#</td>
+      <td>Pos</td>
+      <td>PA</td>
+      <td>AB</td>
+      <td>R</td>
+      <td>H</td>
+      <td>2B</td>
+      <td>3B</td>
+      <td>HR</td>
+      <td>RBI</td>
+      <td>BB</td>
+      <td>SO</td>
+      <td>SF</td>
+      <td>TB</td>
+      <td>AVG</td>
+      <td>OBP</td>
+      <td>SLG</td>
+      <td>OPS</td>
+    </thead>
+    <tbody>
+      <% @season.players.order(last_name: :asc).each do |player| %>
+      <tr>
+        <td><%= link_to player.name, player_path(player) %></td>
+        <td><%= player.number %></td>
+        <td><%= player.primary_position %></td>
+        <td><%= player.total_plate_appearance(@season.id) %></td>
+        <td><%= player.total_at_bats(@season.id) %></td>
+        <td><%= player.total_runs(@season.id) %></td>
+        <td><%= player.total_hits(@season.id) %></td>
+        <td><%= player.total_doubles(@season.id) %></td>
+        <td><%= player.total_triples(@season.id) %></td>
+        <td><%= player.total_homers(@season.id) %></td>
+        <td><%= player.total_rbis(@season.id) %></td>
+        <td><%= player.total_walks(@season.id) %></td>
+        <td><%= player.total_strikeouts(@season.id) %></td>
+        <td><%= player.total_sac_fly(@season.id) %></td>
+        <td><%= player.total_bases(@season.id) %></td>
+        <td><%= player.season_batting_avg(@season.id) %></td>
+        <td><%= player.on_base_pct(@season.id)  %></td>
+        <td><%= player.slugging_pct(@season.id)  %></td>
+        <td><%= player.on_base_plus_slg %></td>
+      </tr>
+      <% end %>
+    </tbody>
+    <thead>
+      <td>Totals</td>
+      <td></td>
+      <td></td>
+      <td><%= @season.team_plate_appearances(@season.id) %></td>
+      <td><%= @season.team_at_bats(@season.id) %></td>
+      <td><%= @season.team_runs(@season.id) %></td>
+      <td><%= @season.team_hits(@season.id) %></td>
+      <td><%= @season.team_doubles(@season.id) %></td>
+      <td><%= @season.team_triples(@season.id) %></td>
+      <td><%= @season.team_homers(@season.id) %></td>
+      <td><%= @season.team_rbis(@season.id) %></td>
+      <td><%= @season.team_walks(@season.id) %></td>
+      <td><%= @season.team_strikeouts(@season.id) %></td>
+      <td><%= @season.team_sac_fly(@season.id) %></td>
+      <td><%= @season.total_bases(@season) %></td>
+      <td><%= @season.team_batting_avg %></td>
+      <td><%= @season.team_on_base_pct %></td>
+      <td><%= @season.team_slugging_pct %></td>
+      <td><%= @season.team_on_base_plus_slg %></td>
+    </thead>
+  </table>
+</div>

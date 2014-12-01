@@ -1,0 +1,24 @@
+<tbody>
+  <% @seasons.order(year: :asc).each do |season| %>
+    <tr>
+      <td><%= season.year %></td>
+      <td><%= season.games.count %></td>
+      <td><%= season.team_plate_appearances(season.id) %></td>
+      <td><%= season.team_at_bats(season.id) %></td>
+      <td><%= season.team_runs(season.id) %></td>
+      <td><%= season.team_hits(season.id) %></td>
+      <td><%= season.team_doubles(season.id) %></td>
+      <td><%= season.team_triples(season.id) %></td>
+      <td><%= season.team_homers(season.id) %></td>
+      <td><%= season.team_rbis(season.id) %></td>
+      <td><%= season.team_walks(season.id) %></td>
+      <td><%= season.team_strikeouts(season.id) %></td>
+      <td><%= season.team_sac_fly(season.id) %></td>
+      <td><%= season.total_bases(season) %></td>
+      <td><%= season.team_batting_avg %></td>
+      <td><%= season.team_on_base_pct %></td>
+      <td><%= season.team_slugging_pct %></td>
+      <td><%= season.team_on_base_plus_slg %></td>
+    </tr>
+  <% end %>
+</tbody>
